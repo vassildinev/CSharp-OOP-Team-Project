@@ -1,5 +1,5 @@
-C# Object-Oriented Programming Team Project
--------------------------------------------
+C# OOP Team Project
+---------------------------------------
 Team Blueberry
 
 Ivailo Petrov - Ivayl3
