@@ -10,8 +10,34 @@
         public BlueElectron(Point position, Vector speed)
             : base(position, speed)
         {
-            this.startX = this.Position.Row;
-            this.startY = this.Position.Col;
+            this.StartX = this.Position.Row;
+            this.StartY = this.Position.Col;
+        }
+
+        public int StartX
+        {
+            get { return this.startX; }
+            private set
+            {
+                if(value < 0)
+                {
+                    throw new InvalidBlueberryException("Can't set start Point to less than 0");
+                }
+                this.startX = value;
+            }
+        }
+
+        public int StartY
+        {
+            get { return this.startY; }
+            private set
+            {
+                if (value < 0)
+                {
+                    throw new InvalidBlueberryException("Can't set start Point to less than 0");
+                }
+                this.startY = value;
+            }
         }
 
         public override void Move()

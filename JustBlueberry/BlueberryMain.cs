@@ -20,7 +20,6 @@
               new RedElectron(new Point(17, 18), new Vector(-1, -1)),
               new GreenElectron(new Point(16, 15), new Vector(-1, 0)),
               new BlueElectron(new Point(16, 15), new Vector(1, 0))
-
             };
 
             var engine = new Engine(renderer, hadronOperator, hadrons, 40);

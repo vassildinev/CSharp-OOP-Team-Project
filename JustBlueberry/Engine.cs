@@ -22,40 +22,40 @@
 
         public int ThreadSleepParam
         {
-            get { return threadSleepParam; }
+            get { return this.threadSleepParam; }
             set
             {
                 if (value==0)
                 {
                     throw new ArgumentException("ThreadSleep parameter must be larger than zero.");
                 }
-                threadSleepParam = value; 
+                this.threadSleepParam = value; 
             }
         }
 
         public IRenderer Renderer
         {
-            get { return renderer; }
+            get { return this.renderer; }
             set
             {
                 if (value == null)
                 {
                     // TODO: throw new RendererMissingException
                 }
-                renderer = value;
+                this.renderer = value;
             }
         }
 
         private IOperator HadronOperator
         {
-            get { return hadronOperator; }
+            get { return this.hadronOperator; }
             set
             {
                 if (value == null)
                 {
                     // TODO: throw new HadronMissingException
                 }
-                hadronOperator = value;
+                this.hadronOperator = value;
             }
         }
 

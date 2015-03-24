@@ -12,5 +12,15 @@
             this.Row = row;
             this.Col = col;
         }
+
+        public static Point operator +(Point p, Vector speed)
+        {
+            return new Point(p.Row + speed.DeltaR, p.Col + speed.DeltaC);
+        }
+
+        public static Point operator -(Point p, Vector speed)
+        {
+            return new Point(p.Row - speed.DeltaR, p.Col - speed.DeltaC);
+        }
     }
 }
