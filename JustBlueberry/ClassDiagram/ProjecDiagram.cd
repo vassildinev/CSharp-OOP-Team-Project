@@ -16,7 +16,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.BlueElectron" Collapsed="true">
-    <Position X="4.25" Y="4.75" Width="1.5" />
+    <Position X="2.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAKACAAAgAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>BlueElectron.cs</FileName>
@@ -32,7 +32,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JustBlueberry.Electron" Collapsed="true">
-    <Position X="4.25" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIACAAAAAAAAAAABAAgAAQAABAAAAAAAAAA=</HashCode>
       <FileName>Electron.cs</FileName>
@@ -47,7 +47,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.GreenElectron" Collapsed="true">
-    <Position X="6.5" Y="4.75" Width="1.5" />
+    <Position X="5" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="JustBlueberry.Electron" ManuallyRouted="true">
+      <Path>
+        <Point X="3.5" Y="3.941" />
+        <Point X="3.5" Y="4.252" />
+        <Point X="5.75" Y="4.252" />
+        <Point X="5.75" Y="5.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAEAAAAAIACAAAgAAKAEAAAABAAAAABBEAAAABBAAA=</HashCode>
       <FileName>GreenElectron.cs</FileName>
@@ -55,7 +63,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Hadron" Collapsed="true">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Hadron.cs</FileName>
@@ -87,7 +95,15 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.RedElectron" Collapsed="true">
-    <Position X="2" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="JustBlueberry.Electron" ManuallyRouted="true">
+      <Path>
+        <Point X="3.5" Y="3.941" />
+        <Point X="3.5" Y="4.252" />
+        <Point X="1.25" Y="4.252" />
+        <Point X="1.25" Y="5.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIACAAAgAAABAAAAAAAAAAAABAAIAAAAAAA=</HashCode>
       <FileName>RedElectron.cs</FileName>
@@ -109,49 +125,49 @@
     </TypeIdentifier>
   </Struct>
   <Interface Name="JustBlueberry.IColor" Collapsed="true">
-    <Position X="13" Y="3.75" Width="1.5" />
+    <Position X="13.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\IColor.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.IHadron" Collapsed="true">
-    <Position X="14.75" Y="3.75" Width="1.5" />
+    <Position X="15.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\IHadron.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.IMovable" Collapsed="true">
-    <Position X="16.5" Y="3.75" Width="1.5" />
+    <Position X="17" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.IOperator" Collapsed="true">
-    <Position X="13" Y="4.5" Width="1.5" />
+    <Position X="13.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\IOperator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.IRenderable" Collapsed="true">
-    <Position X="14.75" Y="4.5" Width="1.5" />
+    <Position X="15.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\IRenderable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.IRenderer" Collapsed="true">
-    <Position X="16.5" Y="4.5" Width="1.5" />
+    <Position X="17" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAECAA=</HashCode>
       <FileName>Intefaces\IRenderer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.ISound" Collapsed="true">
-    <Position X="13" Y="5.25" Width="1.5" />
+    <Position X="13.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Intefaces\ISound.cs</FileName>
