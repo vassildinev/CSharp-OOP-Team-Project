@@ -12,17 +12,17 @@
         {
             this.GameWorldRows = rows;
             this.GameWorldCols = cols;
-            this.gameWorld = new char[rows, cols];
+            this.GameWorld = new char[this.GameWorldRows, this.GameWorldCols];
         }
 
         public int GameWorldRows
         {
-            get { return this.gameWorldRows;}
+            get { return this.gameWorldRows; }
             set
             {
-                if(value <0)
+                if (value < 0)
                 {
-                    throw new InvalidBlueberryException("Can't set Render with less than 0");
+                    throw new InvalidBlueberryException("Number of renderer rows must be a positive integer.");
                 }
                 this.gameWorldRows = value;
             }
@@ -33,9 +33,9 @@
             get { return this.gameWorldCols; }
             set
             {
-                if(value <0)
+                if (value < 0)
                 {
-                    throw new InvalidBlueberryException("Can't set Render with less than 0");
+                    throw new InvalidBlueberryException("Number of renderer cols must be a positive integer.");
                 }
                 this.gameWorldCols = value;
             }
@@ -44,6 +44,7 @@
         public char[,] GameWorld
         {
             get { return this.gameWorld; }
+            private set { this.gameWorld = value; }
         }
 
         public void Push(IRenderable objectToRender)

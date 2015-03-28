@@ -13,14 +13,14 @@
             this.Col = col;
         }
 
-        public static Point operator +(Point p, Vector speed)
+        public static Point operator +(Point pt, Vector speed)
         {
-            return new Point(p.Row + speed.DeltaR, p.Col + speed.DeltaC);
+            return new Point(pt.Row + speed.DeltaR, pt.Col + speed.DeltaC);
         }
 
-        public static Point operator -(Point p, Vector speed)
+        public static Point operator -(Point pt, Vector speed)
         {
-            return new Point(p.Row - speed.DeltaR, p.Col - speed.DeltaC);
+            return new Point(pt.Row - speed.DeltaR, pt.Col - speed.DeltaC);
         }
     }
 }

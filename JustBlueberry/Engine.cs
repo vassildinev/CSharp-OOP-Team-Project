@@ -1,6 +1,7 @@
 ﻿namespace JustBlueberry
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     using System.Threading;
     using JustBlueberry.Extensions;
@@ -25,11 +26,11 @@
             get { return this.threadSleepParam; }
             set
             {
-                if (value==0)
+                if (value < 0)
                 {
                     throw new ArgumentException("ThreadSleep parameter must be larger than zero.");
                 }
-                this.threadSleepParam = value; 
+                this.threadSleepParam = value;
             }
         }
 
@@ -72,9 +73,9 @@
             }
         }
 
-        public void AddHadron(IHadron p)
+        public void AddHadron(IHadron hadron)
         {
-            this.hadrons.Add(p);
+            this.hadrons.Add(hadron);
         }
 
         public void Run()
@@ -111,11 +112,13 @@
 
         private void Process()
         {
-            Hadrons.ForEach(x => renderer.Push(x as IRenderable));
+            // Filter only renderable particles and then push them for rendering (prevents unwanted exception throw).
+            Hadrons.Where(x => x is IRenderable).ForEach(x => renderer.Push(x as IRenderable));
         }
 
         private void Update()
         {
+            // Update all available particles (both renderable and not renderable).
             hadrons.ForEach(x => hadronOperator.OperateOn(x));
         }
 
