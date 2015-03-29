@@ -11,8 +11,8 @@
         private uint lifetime; // measured in frames
         private bool isDead;
         private bool mustProjectSound;
-        private int startX;
-        private int startY;
+        private int startR;
+        private int startC;
 
         public GreenElectron(Point position)
             : base(position, new Vector(-1, 0))
@@ -21,8 +21,8 @@
             this.isDead = false;
             this.MustProjectSound = true;
 
-            this.startX = this.Position.Row;
-            this.startY = this.Position.Col;
+            this.startR = this.Position.Row;
+            this.startC = this.Position.Col;
         }
 
         public uint Life
@@ -71,25 +71,25 @@
         public override void ApplyMovementPattern()
         {
             if (this.Speed.DeltaR != 0 && this.Speed.DeltaC == 0
-                    && this.Position.Row - this.startX > GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN)
+                    && this.Position.Row - this.startR > GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN)
             {
                 this.Speed.DeltaR = 0;
                 this.Speed.DeltaC = 1;
             }
             else if (this.Speed.DeltaR == 0 && this.Speed.DeltaC != 0
-                && this.Position.Col - this.startY > GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN + 2)
+                && this.Position.Col - this.startC > GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN + 2)
             {
                 this.Speed.DeltaR = -1;
                 this.Speed.DeltaC = 0;
             }
             else if (this.Speed.DeltaR != 0 && this.Speed.DeltaC == 0
-                && this.Position.Row - this.startX < -GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN)
+                && this.Position.Row - this.startR < -GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN)
             {
                 this.Speed.DeltaR = 0;
                 this.Speed.DeltaC = -1;
             }
             else if (this.Speed.DeltaR == 0 && this.Speed.DeltaC != 0
-                && this.Position.Col - this.startY < -GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN - 2)
+                && this.Position.Col - this.startC < -GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN - 2)
             {
                 this.Speed.DeltaR = 1;
                 this.Speed.DeltaC = 0;
