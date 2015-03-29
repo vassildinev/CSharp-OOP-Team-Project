@@ -2,6 +2,8 @@
 {
     using System;
     using System.Text;
+    using JustBlueberry.Interfaces;
+
     public class ConsoleRenderer : IRenderer
     {
         private int gameWorldRows;

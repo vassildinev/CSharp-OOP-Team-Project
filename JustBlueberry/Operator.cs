@@ -1,6 +1,8 @@
 ﻿namespace JustBlueberry
 {
     using System.Collections.Generic;
+    using JustBlueberry.Interfaces;
+
     public class Operator : IOperator
     {
         public void OperateOn(IHadron particle)
