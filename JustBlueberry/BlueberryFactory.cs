@@ -10,12 +10,12 @@
             return new DarkBlueberry(
                                     new List<IHadron>()
                                     {
-                                        new Proton(new Point(5, 7) + translationVector),
-                                        new Proton(new Point(8, 12) + translationVector),
-                                        new Proton(new Point(4, 5) + translationVector),
-                                        new Proton(new Point(9, 14) + translationVector),
-                                        new WhiteElectron(new Point(2,7) + translationVector),
-                                        new BlackElectron(new Point(4,0) + translationVector)
+                                        new Proton(new Point(3, 7) + translationVector),
+                                        new Proton(new Point(6, 12) + translationVector),
+                                        new Proton(new Point(2, 5) + translationVector),
+                                        new Proton(new Point(7, 14) + translationVector),
+                                        new WhiteElectron(new Point(0, 7) + translationVector),
+                                        new BlackElectron(new Point(2, 0) + translationVector)
                                     }
                                  );
         }
@@ -24,10 +24,10 @@
         {
             return new NervousBlueberry(new List<IHadron>() 
                                         {
-                                            new Proton(new Point(11, 11) + translationVector),
-                                            new RedElectron(new Point(12, 15) + translationVector),
-                                            new BlueElectron(new Point(11, 11) + translationVector),
-                                            new GreenElectron(new Point(11, 11) + translationVector)
+                                            new Proton(new Point(9, 11) + translationVector),
+                                            new RedElectron(new Point(10, 15) + translationVector),
+                                            new BlueElectron(new Point(9, 12) + translationVector),
+                                            new GreenElectron(new Point(9, 11) + translationVector)
                                         }
                                       );
         }

@@ -17,12 +17,12 @@
 
             var physicalWorldObjects = new List<IMatter>()
             {
-                BlueberryFactory.CreateDarkBlueberry(new Vector(2,2)),
-                BlueberryFactory.CreateNervousBlueberry(new Vector(2, 40))
+                BlueberryFactory.CreateDarkBlueberry(new Vector()),
+                BlueberryFactory.CreateNervousBlueberry(new Vector(10, 30))
             };
 
 
-            var engine = new Engine(renderer, hadronOperator, physicalWorldObjects, 100);
+            var engine = new Engine(renderer, hadronOperator, physicalWorldObjects, 500);
 
             engine.Run();
         }
