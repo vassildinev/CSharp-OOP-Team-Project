@@ -1,7 +1,14 @@
 ﻿namespace JustBlueberry
 {
     using System.Collections.Generic;
-    using JustBlueberry.Interfaces;
+
+    using JustBlueberry.Particles;
+    using JustBlueberry.Engine;
+    using JustBlueberry.Renderer;
+    using JustBlueberry.Operator;
+    using JustBlueberry.Factory;
+    using JustBlueberry.Commons;
+    using JustBlueberry.Blueberries.Contracts;
 
     public class BlueberryMain
     {
@@ -13,7 +20,7 @@
         {
             var renderer = new ConsoleRenderer(DEFAULT_WORLD_ROWS, DEFAULT_WORLD_COLS);
 
-            var hadronOperator = new Operator();
+            var hadronOperator = new ParticleOperator();
 
             var physicalWorldObjects = new List<IMatter>()
             {
@@ -22,7 +29,7 @@
             };
 
 
-            var engine = new Engine(renderer, hadronOperator, physicalWorldObjects, 500);
+            var engine = new BlueberryEngine(renderer, hadronOperator, physicalWorldObjects, 500);
 
             engine.Run();
         }

@@ -41,43 +41,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ParticleHierarchy\Baryon.cs" />
-    <Compile Include="ParticleHierarchy\BlackElectron.cs" />
-    <Compile Include="BlueberryObjects\DarkBlueberry.cs" />
-    <Compile Include="BlueberryObjects\DarkMatter.cs" />
-    <Compile Include="Interfaces\IMatter.cs" />
-    <Compile Include="Interfaces\IRadioactive.cs" />
-    <Compile Include="ParticleHierarchy\Meson.cs" />
-    <Compile Include="Operator.cs" />
+    <Compile Include="Particles\Baryon.cs" />
+    <Compile Include="Particles\BlackElectron.cs" />
+    <Compile Include="Blueberries\DarkBlueberry.cs" />
+    <Compile Include="Blueberries\DarkMatter.cs" />
+    <Compile Include="Blueberries\Contracts\IMatter.cs" />
+    <Compile Include="Blueberries\Contracts\IRadioactive.cs" />
+    <Compile Include="Particles\Meson.cs" />
+    <Compile Include="Operator\ParticleOperator.cs" />
     <Compile Include="BlueberryMain.cs" />
-    <Compile Include="ParticleHierarchy\BlueElectron.cs" />
-    <Compile Include="ConsoleRenderer.cs" />
-    <Compile Include="ParticleHierarchy\Electron.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Particles\BlueElectron.cs" />
+    <Compile Include="Renderer\ConsoleRenderer.cs" />
+    <Compile Include="Particles\Electron.cs" />
+    <Compile Include="Engine\BlueberryEngine.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="ParticleHierarchy\GreenElectron.cs" />
-    <Compile Include="Interfaces\IColor.cs" />
-    <Compile Include="Interfaces\IHadron.cs" />
-    <Compile Include="Interfaces\IOperator.cs" />
-    <Compile Include="Interfaces\IMovable.cs" />
-    <Compile Include="Exceptions\InvalidBlueberryException.cs" />
-    <Compile Include="Interfaces\IRenderer.cs" />
-    <Compile Include="Interfaces\IRenderable.cs" />
-    <Compile Include="ParticleHierarchy\Hadron.cs" />
-    <Compile Include="Interfaces\ISound.cs" />
-    <Compile Include="BlueberryFactory.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="BlueberryObjects\NervousBlueberry.cs" />
-    <Compile Include="ParticleHierarchy\Proton.cs" />
-    <Compile Include="ParticleHierarchy\RedElectron.cs" />
+    <Compile Include="Particles\GreenElectron.cs" />
+    <Compile Include="Particles\Contracts\IColor.cs" />
+    <Compile Include="Particles\Contracts\IHadron.cs" />
+    <Compile Include="Operator\Contracts\IOperator.cs" />
+    <Compile Include="Particles\Contracts\IMovable.cs" />
+    <Compile Include="ExceptionHandling\InvalidBlueberryException.cs" />
+    <Compile Include="Renderer\Contracts\IRenderer.cs" />
+    <Compile Include="Particles\Contracts\IRenderable.cs" />
+    <Compile Include="Particles\Hadron.cs" />
+    <Compile Include="Particles\Contracts\ISound.cs" />
+    <Compile Include="Factory\BlueberryFactory.cs" />
+    <Compile Include="Commons\Point.cs" />
+    <Compile Include="Blueberries\NervousBlueberry.cs" />
+    <Compile Include="Particles\Proton.cs" />
+    <Compile Include="Particles\RedElectron.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vector.cs" />
-    <Compile Include="ParticleHierarchy\WhiteElectron.cs" />
+    <Compile Include="Commons\Vector.cs" />
+    <Compile Include="Particles\WhiteElectron.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BlueberryDiagram\ProjecDiagram.cd" />
+    <None Include="BlueberryDiagram\ProjectDiagram.cd" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
