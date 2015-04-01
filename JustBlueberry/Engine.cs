@@ -1,12 +1,13 @@
 ﻿namespace JustBlueberry
 {
-    using System;
-    using System.Linq;
-    using System.Collections.Generic;
-    using System.Threading;
+    using JustBlueberry.Exceptions;
     using JustBlueberry.Extensions;
     using JustBlueberry.Interfaces;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
+    using System.Threading;
 
 
     public class Engine
@@ -44,7 +45,7 @@
             {
                 if (value == null)
                 {
-                    // TODO: throw new RendererMissingException
+                    throw new RendererMissingException("The Render can not be null");
                 }
                 this.renderer = value;
             }
@@ -57,7 +58,7 @@
             {
                 if (value == null)
                 {
-                    // TODO: throw new HadronMissingException
+                    throw new HadronMissingException("The Hadrons can not be null");
                 }
                 this.hadronOperator = value;
             }
