@@ -3,7 +3,7 @@
     using System;
 
     using JustBlueberry.Particles.Contracts;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public class BlackElectron : Electron, IRenderable, IMovable
     {

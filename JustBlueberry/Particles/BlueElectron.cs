@@ -2,7 +2,7 @@
 {
     using JustBlueberry.ExceptionHandling;
     using JustBlueberry.Particles.Contracts;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public class BlueElectron : Electron, IRenderable, IMovable
     {

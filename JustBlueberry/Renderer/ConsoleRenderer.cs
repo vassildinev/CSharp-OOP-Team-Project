@@ -4,7 +4,7 @@
     using System.Text;
 
     using JustBlueberry.ExceptionHandling;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
     using JustBlueberry.Renderer.Contracts;
     using JustBlueberry.Particles.Contracts;
 

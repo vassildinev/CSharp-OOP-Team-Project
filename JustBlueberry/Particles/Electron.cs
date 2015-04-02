@@ -3,7 +3,7 @@
     using System.Collections.Generic;
 
     using JustBlueberry.Particles.Contracts;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public abstract class Electron : Baryon, IHadron, IRenderable, IMovable
     {

@@ -1,4 +1,4 @@
-﻿namespace JustBlueberry.Commons
+﻿namespace JustBlueberry.Common
 {
     public class Vector
     {

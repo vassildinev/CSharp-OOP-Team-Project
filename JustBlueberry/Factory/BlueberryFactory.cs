@@ -6,7 +6,7 @@
     using JustBlueberry.Particles;
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Blueberries.Contracts;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public static class BlueberryFactory
     {

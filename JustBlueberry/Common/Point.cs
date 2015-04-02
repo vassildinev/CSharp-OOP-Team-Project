@@ -1,4 +1,4 @@
-﻿namespace JustBlueberry.Commons
+﻿namespace JustBlueberry.Common
 {
     // Base structure.
     public struct Point

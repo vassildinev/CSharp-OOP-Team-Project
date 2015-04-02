@@ -1,7 +1,7 @@
 ﻿namespace JustBlueberry.Particles
 {
     using JustBlueberry.Particles.Contracts;
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public abstract class Meson : Hadron, IHadron
     {

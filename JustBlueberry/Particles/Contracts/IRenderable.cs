@@ -2,7 +2,7 @@
 {
     // Interface for objects that have to implement rendering.
 
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public interface IRenderable
     {

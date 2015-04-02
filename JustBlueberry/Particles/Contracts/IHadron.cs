@@ -1,6 +1,6 @@
 ﻿namespace JustBlueberry.Particles.Contracts
 {
-    using JustBlueberry.Commons;
+    using JustBlueberry.Common;
 
     public interface IHadron
     {
