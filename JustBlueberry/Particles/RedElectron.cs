@@ -12,7 +12,7 @@
         private int startC;
 
         public RedElectron(Point position)
-            : base(position, new Vector(0, 1))
+            : base(position, new Vector(-1, -1))
         {
             this.startR = this.Position.Row;
             this.startC = this.Position.Col;

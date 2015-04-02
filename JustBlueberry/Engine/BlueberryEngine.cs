@@ -135,7 +135,7 @@
         private void SetConsole()
         {
             Console.WindowHeight = 40;
-            Console.WindowWidth = 95;
+            Console.WindowWidth = 100;
             Console.BufferHeight = 40;
             Console.BufferWidth = 100;
             Console.CursorVisible = false;

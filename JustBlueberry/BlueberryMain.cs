@@ -14,7 +14,7 @@
     {
         // Define constant dimensions for the game world.
         const int DEFAULT_WORLD_ROWS = 30;
-        const int DEFAULT_WORLD_COLS = 80;
+        const int DEFAULT_WORLD_COLS = 99;
 
         public static void Main()
         {
