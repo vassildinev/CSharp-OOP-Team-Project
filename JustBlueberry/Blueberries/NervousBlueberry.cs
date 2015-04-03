@@ -5,6 +5,7 @@
     using JustBlueberry.Particles;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Particles.Contracts;
+    using JustBlueberry.ApplicationExceptions;
 
     public class NervousBlueberry : IMatter, IRadioactive
     {
@@ -27,7 +28,12 @@
                 }
             }
 
-            // throw new PowerElectronMissingException
+            if (this.HasPowerElectron == false)
+            {
+                throw new PowerElectronMissingException("Invalid NervousBlueberry - WARNING! Power Electron Missing");
+            }
+
+
         }
 
         public bool HasPowerElectron

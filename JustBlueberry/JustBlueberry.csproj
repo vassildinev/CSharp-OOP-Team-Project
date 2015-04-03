@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationExceptions\HadronMissingException.cs" />
+    <Compile Include="ApplicationExceptions\PowerElectronMissingException.cs" />
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
     <Compile Include="Particles\Baryon.cs" />
     <Compile Include="Particles\BlackElectron.cs" />

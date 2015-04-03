@@ -29,7 +29,7 @@
             };
 
 
-            var engine = new BlueberryEngine(renderer, hadronOperator, physicalWorldObjects, 500);
+            var engine = new BlueberryEngine(renderer, hadronOperator, physicalWorldObjects, 100);
 
             engine.Run();
         }
