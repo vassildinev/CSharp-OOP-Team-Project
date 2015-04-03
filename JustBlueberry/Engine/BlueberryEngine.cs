@@ -7,6 +7,7 @@
     using System.Threading;
 
     using JustBlueberry.Operator;
+    using JustBlueberry.Common;
     using JustBlueberry.Renderer;
     using JustBlueberry.Extensions;
     using JustBlueberry.ApplicationExceptions;
@@ -14,7 +15,7 @@
     using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Renderer.Contracts;
-   
+
 
 
     public class BlueberryEngine
@@ -24,7 +25,8 @@
         private IRenderer renderer;
         private int threadSleepParam;
 
-        public BlueberryEngine(IRenderer renderer, IOperator hadronOperator, IList<IMatter> substance, int threadSleepParam = 500)
+        public BlueberryEngine(IRenderer renderer, IOperator hadronOperator,
+            IList<IMatter> substance, int threadSleepParam = GlobalConstants.DefaultEngineThreadSleepParameter)
         {
             this.Renderer = renderer;
             this.HadronOperator = hadronOperator;
@@ -135,10 +137,11 @@
 
         private void SetConsole()
         {
-            Console.WindowHeight = 40;
-            Console.WindowWidth = 100;
-            Console.BufferHeight = 40;
-            Console.BufferWidth = 100;
+
+            Console.WindowHeight = GlobalConstants.DefaultConsoleWindowHeight;
+            Console.WindowWidth = GlobalConstants.DefaultConsoleWindowWidth;
+            Console.BufferHeight = GlobalConstants.DefaultConsoleBufferHeight;
+            Console.BufferWidth = GlobalConstants.DefaultConsoleBufferWidth;
             Console.CursorVisible = false;
             Console.OutputEncoding = Encoding.Unicode;
             Console.Title = "JustBlueberries";

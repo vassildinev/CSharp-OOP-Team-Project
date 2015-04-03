@@ -44,6 +44,7 @@
     <Compile Include="ApplicationExceptions\HadronMissingException.cs" />
     <Compile Include="ApplicationExceptions\PowerElectronMissingException.cs" />
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
+    <Compile Include="Common\GlobalConstants.cs" />
     <Compile Include="Particles\Baryon.cs" />
     <Compile Include="Particles\BlackElectron.cs" />
     <Compile Include="Blueberries\DarkBlueberry.cs" />

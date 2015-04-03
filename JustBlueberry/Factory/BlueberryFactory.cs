@@ -15,12 +15,12 @@
             return new DarkBlueberry(
                                     new List<IHadron>()
                                     {
-                                        new Proton(new Point(3, 7) + translationVector),
-                                        new Proton(new Point(6, 12) + translationVector),
-                                        new Proton(new Point(2, 5) + translationVector),
-                                        new Proton(new Point(7, 14) + translationVector),
-                                        new WhiteElectron(new Point(0, 7) + translationVector),
-                                        new BlackElectron(new Point(2, 0) + translationVector)
+                                        new Proton(GlobalConstants.DarkBlueberryFirstProtonStartPosition + translationVector),
+                                        new Proton(GlobalConstants.DarkBlueberrySecondProtonStartPosition + translationVector),
+                                        new Proton(GlobalConstants.DarkBlueberryThirdProtonStartPosition + translationVector),
+                                        new Proton(GlobalConstants.DarkBlueberryFourthProtonStartPosition + translationVector),
+                                        new WhiteElectron(GlobalConstants.DarkBlueberryWhiteElectronStartPosition + translationVector),
+                                        new BlackElectron(GlobalConstants.DarkBlueberryBlackElectronStartPosition + translationVector)
                                     }
                                  );
         }
@@ -29,10 +29,10 @@
         {
             return new NervousBlueberry(new List<IHadron>() 
                                         {
-                                            new Proton(new Point(9, 11) + translationVector),
-                                            new RedElectron(new Point(10, 15) + translationVector),
-                                            new BlueElectron(new Point(9, 12) + translationVector),
-                                            new GreenElectron(new Point(9, 11) + translationVector)
+                                            new Proton( GlobalConstants.NervousBlueberryProtonStartPosition + translationVector),
+                                            new RedElectron(GlobalConstants.NervousBlueberrytRedElectronStartPosition + translationVector),
+                                            new BlueElectron(GlobalConstants.NervousBlueberryBlueElectronStartPosition + translationVector),
+                                            new GreenElectron(GlobalConstants.NervousBlueberryGreenElectronPosition + translationVector)
                                         }
                                       );
         }
