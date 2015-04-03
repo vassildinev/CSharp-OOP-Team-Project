@@ -5,7 +5,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public abstract class Electron : Baryon, IHadron, IRenderable, IMovable
+    public abstract class Electron : Baryon, IHadron, IRenderable, IMovable, IColor
     {
         const char ELECTRON_SHAPE = '-';
 
@@ -34,5 +34,10 @@
         }
 
         public abstract void ApplyMovementPattern();
+
+        System.ConsoleColor IColor.ProjectColor()
+        {
+            return System.ConsoleColor.Yellow;
+        }
     }
 }

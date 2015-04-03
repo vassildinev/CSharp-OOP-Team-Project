@@ -3,7 +3,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public class WhiteElectron : Electron, IRenderable, IMovable
+    public class WhiteElectron : Electron, IRenderable, IMovable, IColor
     {
         const char WHITE_PARTICLE_SHAPE = '¤';
 
@@ -62,6 +62,11 @@
             {
                 this.Speed = new Vector(0, 1);
             }
+        }
+
+        public System.ConsoleColor ProjectColor()
+        {
+            return System.ConsoleColor.White;
         }
     }
 }

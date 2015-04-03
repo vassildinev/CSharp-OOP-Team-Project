@@ -3,7 +3,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public class RedElectron : Electron, IRenderable
+    public class RedElectron : Electron, IRenderable, IColor
     {
         const char RED_ELECTRON_SHAPE = '*';
         const int RED_ELECTRON_SIZE_OF_MOVEMENT_PATTERN = 8;
@@ -49,6 +49,11 @@
                 this.Speed.DeltaR = -1;
                 this.Speed.DeltaC = -1;
             }
+        }
+
+        public System.ConsoleColor ProjectColor()
+        {
+            return System.ConsoleColor.Red;
         }
     }
 }

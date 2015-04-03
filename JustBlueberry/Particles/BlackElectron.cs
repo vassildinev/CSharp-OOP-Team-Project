@@ -5,7 +5,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public class BlackElectron : Electron, IRenderable, IMovable
+    public class BlackElectron : Electron, IRenderable, IMovable, IColor
     {
         const char BLACK_PARTICLE_SHAPE = '$';
 
@@ -64,6 +64,11 @@
             {
                 this.Speed = new Vector(1, 0);
             }
+        }
+
+        ConsoleColor IColor.ProjectColor()
+        {
+            return System.ConsoleColor.Black;
         }
     }
 }

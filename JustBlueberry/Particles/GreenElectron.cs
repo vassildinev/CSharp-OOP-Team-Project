@@ -5,7 +5,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public class GreenElectron : Electron, IRenderable, IMovable, ISound
+    public class GreenElectron : Electron, IRenderable, IMovable, ISound, IColor
     {
         const int GREEN_ELECTRON_SIZE_OF_MOVEMENT_PATTERN = 8;
         const char GREEN_ELECTRON_SHAPE = '~';
@@ -101,6 +101,11 @@
         public void ProjectSound()
         {
             Console.Beep(800, 100);
+        }
+
+        ConsoleColor IColor.ProjectColor()
+        {
+            return System.ConsoleColor.Green;
         }
     }
 }

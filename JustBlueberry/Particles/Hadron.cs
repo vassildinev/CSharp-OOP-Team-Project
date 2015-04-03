@@ -5,7 +5,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public abstract class Hadron : IHadron
+    public abstract class Hadron : IHadron, IColor
     {
         protected Hadron(Point position)
         {
@@ -17,6 +17,11 @@
         public Point GetPosition()
         {
             return this.Position;
+        }
+
+        public ConsoleColor ProjectColor()
+        {
+            return System.ConsoleColor.DarkBlue;
         }
     }
 }

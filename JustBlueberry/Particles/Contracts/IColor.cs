@@ -1,7 +1,8 @@
-﻿namespace JustBlueberry.Particles.Contracts
+﻿using System;
+namespace JustBlueberry.Particles.Contracts
 {
     public interface IColor
     {
-        void ProjectColor();
+        ConsoleColor ProjectColor();
     }
 }

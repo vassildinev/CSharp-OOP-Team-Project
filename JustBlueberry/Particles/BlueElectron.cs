@@ -4,7 +4,7 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    public class BlueElectron : Electron, IRenderable, IMovable
+    public class BlueElectron : Electron, IRenderable, IMovable, IColor
     {
         const int BLUE_ELECTRON_SIZE_OF_MOVEMENT_PATTERN = 4;
 
@@ -72,6 +72,11 @@
             {
                 this.Speed = new Vector(1, 0);
             }
+        }
+
+        System.ConsoleColor IColor.ProjectColor()
+        {
+            return System.ConsoleColor.Blue;
         }
     }
 }
