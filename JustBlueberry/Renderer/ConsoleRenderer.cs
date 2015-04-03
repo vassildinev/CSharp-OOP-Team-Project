@@ -3,7 +3,7 @@
     using System;
     using System.Text;
 
-    using JustBlueberry.ExceptionHandling;
+    using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Common;
     using JustBlueberry.Renderer.Contracts;
     using JustBlueberry.Particles.Contracts;

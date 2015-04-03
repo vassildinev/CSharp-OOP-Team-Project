@@ -9,11 +9,12 @@
     using JustBlueberry.Operator;
     using JustBlueberry.Renderer;
     using JustBlueberry.Extensions;
-    using JustBlueberry.ExceptionHandling;
+    using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Renderer.Contracts;
+   
 
 
     public class BlueberryEngine
@@ -51,7 +52,7 @@
             {
                 if (value == null)
                 {
-                    // TODO: throw new RendererMissingException
+                    throw new RendererMissingException("Render can not be null!");
                 }
                 this.renderer = value;
             }
@@ -64,7 +65,7 @@
             {
                 if (value == null)
                 {
-                    // TODO: throw new HadronMissingException
+                    throw new HadronMissingException("Hadron operator can not be null!");
                 }
                 this.hadronOperator = value;
             }

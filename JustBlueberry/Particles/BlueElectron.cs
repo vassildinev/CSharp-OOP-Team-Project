@@ -1,6 +1,6 @@
 ﻿namespace JustBlueberry.Particles
 {
-    using JustBlueberry.ExceptionHandling;
+    using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 

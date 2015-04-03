@@ -1,4 +1,4 @@
-﻿namespace JustBlueberry.ExceptionHandling
+﻿namespace JustBlueberry.ApplicationExceptions
 {
     using System;
     using System.Runtime.Serialization;
