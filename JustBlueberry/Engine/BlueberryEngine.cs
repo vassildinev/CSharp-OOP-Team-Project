@@ -10,6 +10,7 @@
     using JustBlueberry.Common;
     using JustBlueberry.Renderer;
     using JustBlueberry.Common.Extensions;
+    using JustBlueberry.Engine.Operation;
     using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Operator.Contracts;
@@ -20,20 +21,21 @@
 
     public class BlueberryEngine
     {
+        private BlueberryOperationStrategy strategy;
         private IOperator hadronOperator;
         private IList<IMatter> substance;
         private IRenderer renderer;
         private int threadSleepParam;
 
-        private int param = 10;
-
-        public BlueberryEngine(IRenderer renderer, IOperator hadronOperator,
-            IList<IMatter> substance, int threadSleepParam = GlobalConstants.DefaultEngineThreadSleepParameter)
+        public BlueberryEngine(IRenderer renderer, IOperator particleOperator, IOperationStrategy operationStrategy,
+            int threadSleepParam = GlobalConstants.DefaultEngineThreadSleepParameter)
         {
             this.Renderer = renderer;
-            this.HadronOperator = hadronOperator;
-            this.Substance = substance;
+            this.ParticleOperator = particleOperator;
+            this.Substance = operationStrategy.SendInstancesToEngine();
             this.ThreadSleepParam = threadSleepParam;
+
+            this.strategy = new BlueberryOperationStrategy(this.ParticleOperator);
         }
 
         public int ThreadSleepParam
@@ -62,7 +64,7 @@
             }
         }
 
-        private IOperator HadronOperator
+        private IOperator ParticleOperator
         {
             get { return this.hadronOperator; }
             set
@@ -112,12 +114,6 @@
 
                 // Ensure constant app flow.
                 Thread.Sleep(this.ThreadSleepParam);
-
-                param--;
-                if (param == 0)
-                {
-                    this.substance.RemoveAt(0);
-                }
             }
         }
 
@@ -142,6 +138,9 @@
 
         private void Update()
         {
+            // Update list of IMatter instances.
+            this.Substance = this.strategy.SendInstancesToEngine();
+
             // Update state of all available instances of matter.
             substance.ForEach(s => hadronOperator.OperateOn(s));
 

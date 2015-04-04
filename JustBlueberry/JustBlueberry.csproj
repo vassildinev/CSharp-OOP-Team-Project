@@ -46,6 +46,7 @@
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
     <Compile Include="Common\GlobalConstants.cs" />
     <Compile Include="Engine\Operation\BlueberryOperationStrategy.cs" />
+    <Compile Include="Engine\Operation\IOperationStrategy.cs" />
     <Compile Include="Particles\Contracts\BaseParticles\Baryon.cs" />
     <Compile Include="Particles\BlackElectron.cs" />
     <Compile Include="Blueberries\DarkBlueberry.cs" />
