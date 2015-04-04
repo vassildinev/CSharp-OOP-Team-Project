@@ -21,6 +21,8 @@
         {
             var renderer = new AdvancedConsoleRenderer(DEFAULT_WORLD_ROWS, DEFAULT_WORLD_COLS);
 
+            renderer.RenderWelcomeScreen();
+
             var hadronOperator = new ParticleOperator();
 
             var operationStrategy = new BlueberryOperationStrategy(hadronOperator);

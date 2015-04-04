@@ -97,10 +97,7 @@
 
         public void Run()
         {
-            // Set Console parameters.
-            SetConsole();
-
-            // Central / Game loop.
+            // Central loop.
             while (true)
             {
                 // Update all particles' positions.
@@ -146,18 +143,6 @@
 
             // Update all available particles (both renderable and not renderable).
             substance.ForEach(x => x.Particles.ForEach(y => hadronOperator.OperateOn(y)));
-        }
-
-        private void SetConsole()
-        {
-
-            Console.WindowHeight = GlobalConstants.DefaultConsoleWindowHeight;
-            Console.WindowWidth = GlobalConstants.DefaultConsoleWindowWidth;
-            Console.BufferHeight = GlobalConstants.DefaultConsoleBufferHeight;
-            Console.BufferWidth = GlobalConstants.DefaultConsoleBufferWidth;
-            Console.CursorVisible = false;
-            Console.OutputEncoding = Encoding.Unicode;
-            Console.Title = "JustBlueberries";
         }
     }
 }

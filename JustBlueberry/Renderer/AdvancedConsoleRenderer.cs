@@ -1,10 +1,12 @@
 ﻿namespace JustBlueberry.Renderer
 {
     using System;
+    using System.Threading;
     using System.Collections.Generic;
 
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Renderer.Contracts;
+    using JustBlueberry.Common;
 
     public class AdvancedConsoleRenderer : ConsoleRenderer, IRenderer
     {
@@ -48,7 +50,14 @@
         {
             this.renderableObjects.Clear();
             base.Release();
+        }
 
+        public void RenderWelcomeScreen()
+        {
+            Console.CursorVisible = false;
+            Console.SetCursorPosition(0,0);
+            Console.WriteLine(GlobalConstants.WelcomeScreen);
+            Thread.Sleep(3000);
         }
     }
 }

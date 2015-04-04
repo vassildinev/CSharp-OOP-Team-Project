@@ -20,6 +20,8 @@
             this.GameWorldRows = rows;
             this.GameWorldCols = cols;
             this.GameWorld = new char[this.GameWorldRows, this.GameWorldCols];
+
+            this.SetConsole();
         }
 
         protected int GameWorldRows
@@ -85,6 +87,18 @@
         public virtual void Release()
         {
             this.GameWorld = new char[this.GameWorldRows, this.GameWorldCols];
+        }
+
+        protected void SetConsole()
+        {
+
+            Console.WindowHeight = GlobalConstants.DefaultConsoleWindowHeight;
+            Console.WindowWidth = GlobalConstants.DefaultConsoleWindowWidth;
+            Console.BufferHeight = GlobalConstants.DefaultConsoleBufferHeight;
+            Console.BufferWidth = GlobalConstants.DefaultConsoleBufferWidth;
+            Console.CursorVisible = false;
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.Title = "JustBlueberries";
         }
     }
 }

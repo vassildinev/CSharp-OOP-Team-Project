@@ -29,6 +29,7 @@
         public static readonly Point NervousBlueberryBlueElectronStartPosition = new Point(9, 11);
         public static readonly Point NervousBlueberryGreenElectronPosition = new Point(9, 11);
 
-
+        // Renderer constants
+        public static string WelcomeScreen = "WELCOME";
     }
 }
