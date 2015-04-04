@@ -98,7 +98,7 @@
             Console.BufferWidth = GlobalConstants.DefaultConsoleBufferWidth;
             Console.CursorVisible = false;
             Console.OutputEncoding = Encoding.Unicode;
-            Console.Title = "JustBlueberries";
+            Console.Title = "JustBlueberry";
         }
     }
 }
