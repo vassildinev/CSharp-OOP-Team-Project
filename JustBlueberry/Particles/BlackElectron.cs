@@ -2,6 +2,7 @@
 {
     using System;
 
+    using JustBlueberry.Particles.Contracts.BaseParticles;
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 

@@ -8,6 +8,18 @@
 
     public class ParticleOperator : IOperator
     {
+        private int framesElapsed;
+
+        public ParticleOperator()
+        {
+            this.framesElapsed = 0;
+        }
+
+        public int GetElapsedFrames()
+        {
+            return this.framesElapsed;
+        }
+
         public void OperateOn(IHadron particle)
         {
             if (particle as IMovable != null)
@@ -29,7 +41,7 @@
 
         public void EndFrame()
         {
-            // TODO: Implement code as end of frame.
+            ++this.framesElapsed;
         }
     }
 }

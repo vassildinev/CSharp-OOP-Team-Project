@@ -36,5 +36,15 @@
                                         }
                                       );
         }
+
+        public static Stack<IMatter> ListAvailableBlueberries()
+        {
+            Stack<IMatter> availableBlueberries = new Stack<IMatter>();
+
+            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(new Vector()));
+            availableBlueberries.Push(BlueberryFactory.CreateNervousBlueberry(new Vector()));
+
+            return availableBlueberries;
+        }
     }
 }

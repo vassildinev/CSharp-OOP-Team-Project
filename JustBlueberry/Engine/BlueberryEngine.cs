@@ -25,6 +25,8 @@
         private IRenderer renderer;
         private int threadSleepParam;
 
+        private int param = 10;
+
         public BlueberryEngine(IRenderer renderer, IOperator hadronOperator,
             IList<IMatter> substance, int threadSleepParam = GlobalConstants.DefaultEngineThreadSleepParameter)
         {
@@ -110,6 +112,12 @@
 
                 // Ensure constant app flow.
                 Thread.Sleep(this.ThreadSleepParam);
+
+                param--;
+                if (param == 0)
+                {
+                    this.substance.RemoveAt(0);
+                }
             }
         }
 

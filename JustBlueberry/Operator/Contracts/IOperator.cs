@@ -11,6 +11,8 @@
 
         void OperateOn(IMatter matter);
 
-        void EndFrame(); // indicate end of frame - currently no code
+        void EndFrame();
+
+        int GetElapsedFrames();
     }
 }

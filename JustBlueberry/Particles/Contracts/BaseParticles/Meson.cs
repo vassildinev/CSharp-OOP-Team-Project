@@ -1,4 +1,4 @@
-﻿namespace JustBlueberry.Particles
+﻿namespace JustBlueberry.Particles.Contracts.BaseParticles
 {
     using System;
 

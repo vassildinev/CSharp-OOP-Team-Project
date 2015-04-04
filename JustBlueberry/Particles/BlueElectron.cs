@@ -4,6 +4,7 @@
 
     using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Particles.Contracts;
+    using JustBlueberry.Particles.Contracts.BaseParticles;
     using JustBlueberry.Common;
 
     public class BlueElectron : Electron, IRenderable, IMovable, IColor
