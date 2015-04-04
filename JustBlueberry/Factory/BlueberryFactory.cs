@@ -29,7 +29,7 @@
         {
             return new NervousBlueberry(new List<IHadron>() 
                                         {
-                                            new Proton( GlobalConstants.NervousBlueberryProtonStartPosition + translationVector),
+                                            new DynamicProton( GlobalConstants.NervousBlueberryProtonStartPosition + translationVector),
                                             new RedElectron(GlobalConstants.NervousBlueberrytRedElectronStartPosition + translationVector),
                                             new BlueElectron(GlobalConstants.NervousBlueberryBlueElectronStartPosition + translationVector),
                                             new GreenElectron(GlobalConstants.NervousBlueberryGreenElectronPosition + translationVector)

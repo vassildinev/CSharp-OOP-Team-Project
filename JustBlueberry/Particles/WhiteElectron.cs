@@ -1,5 +1,7 @@
 ﻿namespace JustBlueberry.Particles
 {
+    using System;
+
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
@@ -64,9 +66,9 @@
             }
         }
 
-        public System.ConsoleColor ProjectColor()
+        public override ConsoleColor ProjectColor()
         {
-            return System.ConsoleColor.White;
+            return ConsoleColor.White;
         }
     }
 }

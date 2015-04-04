@@ -4,7 +4,7 @@
 
     using JustBlueberry.Common;
 
-    public interface IRenderable
+    public interface IRenderable : IColor
     {
         Point GetPosition();
 

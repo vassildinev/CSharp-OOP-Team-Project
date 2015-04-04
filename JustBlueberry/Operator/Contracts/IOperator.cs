@@ -2,11 +2,15 @@
 {
     using System.Collections.Generic;
 
+    using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Particles.Contracts;
 
     public interface IOperator
     {
         void OperateOn(IHadron particle);
+
+        void OperateOn(IMatter matter);
+
         void EndFrame(); // indicate end of frame - currently no code
     }
 }

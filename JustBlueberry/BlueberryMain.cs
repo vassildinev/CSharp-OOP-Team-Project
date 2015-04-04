@@ -18,18 +18,17 @@
 
         public static void Main()
         {
-            var renderer = new ConsoleRenderer(DEFAULT_WORLD_ROWS, DEFAULT_WORLD_COLS);
+            var renderer = new AdvancedConsoleRenderer(DEFAULT_WORLD_ROWS, DEFAULT_WORLD_COLS);
 
             var hadronOperator = new ParticleOperator();
 
             var physicalWorldObjects = new List<IMatter>()
             {
-                BlueberryFactory.CreateDarkBlueberry(new Vector()),
-                BlueberryFactory.CreateNervousBlueberry(new Vector(10, 30))
+                BlueberryFactory.CreateDarkBlueberry(new Vector(5, 5)),
+                BlueberryFactory.CreateNervousBlueberry(new Vector(10, 40))
             };
 
-
-            var engine = new BlueberryEngine(renderer, hadronOperator, physicalWorldObjects, 100);
+            var engine = new BlueberryEngine(renderer, hadronOperator, physicalWorldObjects, 50);
 
             engine.Run();
         }

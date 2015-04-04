@@ -1,5 +1,7 @@
 ﻿namespace JustBlueberry.Common
 {
+    using System;
+
     public class GlobalConstants
     {
         // Engine Constants
@@ -10,6 +12,9 @@
         public const int DefaultConsoleWindowWidth = 100;
         public const int DefaultConsoleBufferHeight = 40;
         public const int DefaultConsoleBufferWidth = 100;
+        public const ConsoleColor DefaultParticleRenderColor = ConsoleColor.Gray;
+        public const ConsoleColor DefaultElectronRenderColor = ConsoleColor.DarkBlue;
+        public const ConsoleColor DefaultProtonRenderColor = ConsoleColor.Magenta;
 
         // Matter Constats
         public static readonly Point DarkBlueberryFirstProtonStartPosition = new Point(3, 7);
@@ -21,7 +26,7 @@
               
         public static readonly Point NervousBlueberryProtonStartPosition = new Point(9, 11);
         public static readonly Point NervousBlueberrytRedElectronStartPosition = new Point(10, 15);
-        public static readonly Point NervousBlueberryBlueElectronStartPosition = new Point(9, 12);
+        public static readonly Point NervousBlueberryBlueElectronStartPosition = new Point(9, 11);
         public static readonly Point NervousBlueberryGreenElectronPosition = new Point(9, 11);
 
 

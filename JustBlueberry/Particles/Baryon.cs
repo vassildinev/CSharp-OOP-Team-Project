@@ -1,5 +1,7 @@
 ﻿namespace JustBlueberry.Particles
 {
+    using System;
+
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
@@ -10,10 +12,5 @@
         {}
 
         public abstract char GetShape();
-
-        System.ConsoleColor IColor.ProjectColor()
-        {
-            return System.ConsoleColor.DarkYellow;
-        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace JustBlueberry.Extensions
+﻿namespace JustBlueberry.Common.Extensions
 {
     using System;
     using System.Collections.Generic;

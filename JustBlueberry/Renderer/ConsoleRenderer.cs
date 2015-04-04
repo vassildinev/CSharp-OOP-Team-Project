@@ -2,6 +2,7 @@
 {
     using System;
     using System.Text;
+    using System.Collections.Generic;
 
     using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Common;
@@ -21,7 +22,7 @@
             this.GameWorld = new char[this.GameWorldRows, this.GameWorldCols];
         }
 
-        public int GameWorldRows
+        protected int GameWorldRows
         {
             get { return this.gameWorldRows; }
             set
@@ -33,8 +34,8 @@
                 this.gameWorldRows = value;
             }
         }
-
-        public int GameWorldCols
+        
+        protected int GameWorldCols
         {
             get { return this.gameWorldCols; }
             set
@@ -46,14 +47,14 @@
                 this.gameWorldCols = value;
             }
         }
-
-        public char[,] GameWorld
+        
+        protected char[,] GameWorld
         {
             get { return this.gameWorld; }
-            private set { this.gameWorld = value; }
+            set { this.gameWorld = value; }
         }
 
-        public void Push(IRenderable objectToRender)
+        public virtual void Push(IRenderable objectToRender)
         {
             char objectToRenderShape = objectToRender.GetShape();
             Point objectToRenderPosition = objectToRender.GetPosition();
@@ -64,16 +65,16 @@
             }
         }
 
-        public void Print()
+        public virtual void Print()
         {
             Console.SetCursorPosition(0, 0);
 
             StringBuilder frameBuilder = new StringBuilder();
-            for (int row = 0; row < this.gameWorldRows; row++)
+            for (int row = 0; row < this.GameWorldRows; row++)
             {
-                for (int col = 0; col < this.gameWorldCols; col++)
+                for (int col = 0; col < this.GameWorldCols; col++)
                 {
-                    frameBuilder.Append(this.gameWorld[row, col]);
+                    frameBuilder.Append(this.GameWorld[row, col]);
                 }
                 frameBuilder.AppendLine();
             }
@@ -81,15 +82,9 @@
             Console.WriteLine(frameBuilder.ToString());
         }
 
-        public void Release()
+        public virtual void Release()
         {
-            for (int row = 0; row < this.gameWorldRows; row++)
-            {
-                for (int col = 0; col < this.gameWorldCols; col++)
-                {
-                    this.gameWorld[row, col] = ' ';
-                }
-            }
+            this.GameWorld = new char[this.GameWorldRows, this.GameWorldCols];
         }
     }
 }

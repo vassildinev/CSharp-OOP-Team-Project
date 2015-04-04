@@ -19,9 +19,9 @@
             return this.Position;
         }
 
-        public ConsoleColor ProjectColor()
+        public virtual ConsoleColor ProjectColor()
         {
-            return System.ConsoleColor.DarkBlue;
+            return GlobalConstants.DefaultParticleRenderColor; 
         }
     }
 }

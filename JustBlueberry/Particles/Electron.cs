@@ -1,5 +1,6 @@
 ﻿namespace JustBlueberry.Particles
 {
+    using System;
     using System.Collections.Generic;
 
     using JustBlueberry.Particles.Contracts;
@@ -35,9 +36,9 @@
 
         public abstract void ApplyMovementPattern();
 
-        System.ConsoleColor IColor.ProjectColor()
+        public override ConsoleColor ProjectColor()
         {
-            return System.ConsoleColor.Yellow;
+            return GlobalConstants.DefaultElectronRenderColor;
         }
     }
 }

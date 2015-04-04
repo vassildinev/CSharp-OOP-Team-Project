@@ -19,7 +19,7 @@
         public GreenElectron(Point position)
             : base(position, new Vector(-1, 0))
         {
-            this.lifetime = 300;
+            this.lifetime = 100;
             this.isDead = false;
             this.MustProjectSound = true;
 
@@ -103,9 +103,9 @@
             Console.Beep(800, 100);
         }
 
-        ConsoleColor IColor.ProjectColor()
+        public override ConsoleColor ProjectColor()
         {
-            return System.ConsoleColor.Green;
+            return ConsoleColor.Green;
         }
     }
 }

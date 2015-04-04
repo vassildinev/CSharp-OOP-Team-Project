@@ -9,7 +9,7 @@
     using JustBlueberry.Operator;
     using JustBlueberry.Common;
     using JustBlueberry.Renderer;
-    using JustBlueberry.Extensions;
+    using JustBlueberry.Common.Extensions;
     using JustBlueberry.ApplicationExceptions;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Operator.Contracts;
@@ -117,6 +117,9 @@
         {
             // Render current frame and release all particles from rendering.
             renderer.Print();
+
+            Thread.Sleep(this.ThreadSleepParam);
+
             renderer.Release();
 
             // Perform end-of-frame actions.
@@ -131,6 +134,9 @@
 
         private void Update()
         {
+            // Update state of all available instances of matter.
+            substance.ForEach(s => hadronOperator.OperateOn(s));
+
             // Update all available particles (both renderable and not renderable).
             substance.ForEach(x => x.Particles.ForEach(y => hadronOperator.OperateOn(y)));
         }

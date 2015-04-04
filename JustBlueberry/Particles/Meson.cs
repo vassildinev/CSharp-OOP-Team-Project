@@ -1,5 +1,7 @@
 ﻿namespace JustBlueberry.Particles
 {
+    using System;
+
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
@@ -8,10 +10,5 @@
         protected Meson(Point position)
             :base(position)
         { }
-
-        public System.ConsoleColor ProjectColor()
-        {
-            return System.ConsoleColor.Cyan;
-        }
     }
 }

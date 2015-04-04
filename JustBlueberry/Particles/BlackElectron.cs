@@ -66,9 +66,9 @@
             }
         }
 
-        ConsoleColor IColor.ProjectColor()
+        public override ConsoleColor ProjectColor()
         {
-            return System.ConsoleColor.Black;
+            return ConsoleColor.DarkYellow;
         }
     }
 }

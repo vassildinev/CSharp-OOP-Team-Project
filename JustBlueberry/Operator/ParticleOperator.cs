@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
 
+    using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles.Contracts;
 
@@ -12,6 +13,17 @@
             if (particle as IMovable != null)
             {
                 (particle as IMovable).Move();
+            }
+        }
+
+        public void OperateOn(IMatter matter)
+        {
+            if (matter as IRadioactive != null)
+            {
+                if ((matter as IRadioactive).CheckState())
+                {
+                    (matter as IRadioactive).ChangeState();
+                }
             }
         }
 

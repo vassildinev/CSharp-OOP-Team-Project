@@ -1,9 +1,10 @@
 ﻿namespace JustBlueberry.Particles
 {
+    using System;
+
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Common;
 
-    using System;
     public class Proton : Baryon, IHadron, IRenderable, IColor
     {
         const char PROTON_SHAPE = '+';
@@ -17,9 +18,9 @@
             return PROTON_SHAPE;
         }
 
-        public ConsoleColor ProjectColor()
+        public override ConsoleColor ProjectColor()
         {
-           return System.ConsoleColor.DarkGray;
+            return GlobalConstants.DefaultProtonRenderColor;
         }
     }
 }
