@@ -44,6 +44,7 @@
     <Compile Include="ApplicationExceptions\HadronMissingException.cs" />
     <Compile Include="ApplicationExceptions\PowerElectronMissingException.cs" />
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
+    <Compile Include="BlueberryFaçade.cs" />
     <Compile Include="Common\GlobalConstants.cs" />
     <Compile Include="Engine\Operation\BlueberryOperationStrategy.cs" />
     <Compile Include="Engine\Operation\IOperationStrategy.cs" />
