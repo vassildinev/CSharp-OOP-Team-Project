@@ -8,7 +8,7 @@
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {
-        private const int TimeInterval = 60; // Time interval for switching between different instances of IMatter.
+        private const int FrameInterval = 60; // Frame interval for switching between different instances of IMatter.
 
         private Stack<IMatter> localCopyOfInstancesFromFactory;
         private IList<IMatter> instancesToEngine;
@@ -30,7 +30,7 @@
 
         public IList<IMatter> SendInstancesToEngine()
         {
-            if (this.particleOperator.GetElapsedFrames() == TimeInterval)
+            if (this.particleOperator.GetElapsedFrames() == FrameInterval)
             {
                 if (this.localCopyOfInstancesFromFactory.Count != 0)
                 {

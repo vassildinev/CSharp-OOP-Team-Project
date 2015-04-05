@@ -43,6 +43,7 @@
 
             availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(new Vector()));
             availableBlueberries.Push(BlueberryFactory.CreateNervousBlueberry(new Vector()));
+            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(new Vector(20, 25)));
 
             return availableBlueberries;
         }

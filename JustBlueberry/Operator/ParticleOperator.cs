@@ -41,7 +41,7 @@
 
         public void EndFrame()
         {
-            ++this.framesElapsed;
+            this.framesElapsed = (++this.framesElapsed) % 61;
         }
     }
 }
