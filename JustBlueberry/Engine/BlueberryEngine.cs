@@ -7,6 +7,7 @@
     using System.Threading;
 
     using JustBlueberry.Operator;
+    using JustBlueberry.Factory;
     using JustBlueberry.Common;
     using JustBlueberry.Renderer;
     using JustBlueberry.Common.Extensions;
@@ -22,7 +23,7 @@
     public class BlueberryEngine
     {
         private BlueberryOperationStrategy strategy;
-        private IOperator hadronOperator;
+        private IOperator particleOperator;
         private IList<IMatter> substance;
         private IRenderer renderer;
         private int threadSleepParam;
@@ -32,10 +33,9 @@
         {
             this.Renderer = renderer;
             this.ParticleOperator = particleOperator;
-            this.Substance = operationStrategy.SendInstancesToEngine();
             this.ThreadSleepParam = threadSleepParam;
-
             this.strategy = new BlueberryOperationStrategy(this.ParticleOperator);
+            this.Substance = this.strategy.SendInstancesToEngine();
         }
 
         public int ThreadSleepParam
@@ -66,14 +66,14 @@
 
         private IOperator ParticleOperator
         {
-            get { return this.hadronOperator; }
+            get { return this.particleOperator; }
             set
             {
                 if (value == null)
                 {
                     throw new HadronMissingException("Hadron operator can not be null!");
                 }
-                this.hadronOperator = value;
+                this.particleOperator = value;
             }
         }
 
@@ -124,7 +124,7 @@
             renderer.Release();
 
             // Perform end-of-frame actions.
-            hadronOperator.EndFrame();
+            particleOperator.EndOperationCycle();
         }
 
         private void Process()
@@ -135,14 +135,16 @@
 
         private void Update()
         {
-            // Update list of IMatter instances.
-            this.Substance = this.strategy.SendInstancesToEngine();
-
             // Update state of all available instances of matter.
-            substance.ForEach(s => hadronOperator.OperateOn(s));
+            substance.ForEach(s => particleOperator.OperateOn(s));
 
             // Update all available particles (both renderable and not renderable).
-            substance.ForEach(x => x.Particles.ForEach(y => hadronOperator.OperateOn(y)));
+            substance.ForEach(x => x.Particles.ForEach(y => particleOperator.OperateOn(y)));
+        }
+
+        public void OperatorCyclesElapsed(object sender, EventArgs e)
+        {
+            this.Substance = this.strategy.SendInstancesToEngine();
         }
     }
 }

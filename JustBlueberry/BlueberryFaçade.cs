@@ -10,6 +10,7 @@
     using JustBlueberry.Operator;
     using JustBlueberry.Particles;
     using JustBlueberry.Renderer;
+    using System;
 
     public static class BlueberryFaçade
     {
@@ -21,9 +22,12 @@
 
             var particleOperator = new ParticleOperator();
 
+
             var operationStrategy = new BlueberryOperationStrategy(particleOperator);
 
             var engine = new BlueberryEngine(renderer, particleOperator, operationStrategy, 50);
+
+            particleOperator.OperationCyclesTresholdReached += new EventHandler(engine.OperatorCyclesElapsed);
 
             engine.Run();
         }

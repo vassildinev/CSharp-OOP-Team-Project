@@ -5,6 +5,7 @@
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Factory;
     using JustBlueberry.Operator.Contracts;
+using System;
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {
@@ -30,13 +31,13 @@
 
         public IList<IMatter> SendInstancesToEngine()
         {
-            if (this.particleOperator.GetElapsedFrames() == FrameInterval)
-            {
+            //if (this.particleOperator.GetElapsedFrames() == FrameInterval)
+            //{
                 if (this.localCopyOfInstancesFromFactory.Count != 0)
                 {
                     this.InstancesToEngine = new List<IMatter>() { this.localCopyOfInstancesFromFactory.Pop() };
                 }
-            }
+           //}
 
             return this.InstancesToEngine;
         }

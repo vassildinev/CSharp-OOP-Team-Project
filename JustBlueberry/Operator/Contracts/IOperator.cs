@@ -11,7 +11,7 @@
 
         void OperateOn(IMatter matter);
 
-        void EndFrame();
+        void EndOperationCycle();
 
         int GetElapsedFrames();
     }
