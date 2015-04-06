@@ -9,8 +9,6 @@ using System;
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {
-        private const int FrameInterval = 60; // Frame interval for switching between different instances of IMatter.
-
         private Stack<IMatter> localCopyOfInstancesFromFactory;
         private IList<IMatter> instancesToEngine;
 
@@ -20,7 +18,6 @@ using System;
         {
             this.particleOperator = particleOperator;
             this.localCopyOfInstancesFromFactory = BlueberryFactory.ListAvailableBlueberries();
-            this.InstancesToEngine = new List<IMatter>() { this.localCopyOfInstancesFromFactory.Pop() };
         }
 
         public IList<IMatter> InstancesToEngine
@@ -31,13 +28,10 @@ using System;
 
         public IList<IMatter> SendInstancesToEngine()
         {
-            //if (this.particleOperator.GetElapsedFrames() == FrameInterval)
-            //{
                 if (this.localCopyOfInstancesFromFactory.Count != 0)
                 {
                     this.InstancesToEngine = new List<IMatter>() { this.localCopyOfInstancesFromFactory.Pop() };
                 }
-           //}
 
             return this.InstancesToEngine;
         }

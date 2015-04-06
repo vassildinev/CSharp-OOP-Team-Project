@@ -7,7 +7,8 @@
         /// </summary>
         public static void Main()
         {
-            BlueberryFaçade.StartApplication();
+            BlueberryFaçade.Instance.Initialize();
+            BlueberryFaçade.Instance.Start();
         }
     }
 }

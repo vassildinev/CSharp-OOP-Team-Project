@@ -1,11 +1,12 @@
 ﻿namespace JustBlueberry.Operator
 {
+    using System;
     using System.Collections.Generic;
-
+    
     using JustBlueberry.Blueberries.Contracts;
+    using JustBlueberry.Common;
     using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles.Contracts;
-    using System;
 
 
     public delegate void MyEventHandler(object source, EventArgs e);
@@ -30,11 +31,6 @@
             this.framesElapsed = 0;
         }
 
-        public int GetElapsedFrames()
-        {
-            return this.framesElapsed;
-        }
-
         public void OperateOn(IHadron particle)
         {
             if (particle as IMovable != null)
@@ -56,8 +52,8 @@
 
         public void EndOperationCycle()
         {
-            this.framesElapsed = (++this.framesElapsed) % 61;
-            if (this.framesElapsed == 60)
+            this.framesElapsed = (++this.framesElapsed) % GlobalConstants.FramesCycleDuration;
+            if (this.framesElapsed == GlobalConstants.FramesCycleDuration - 1)
             {
                 OnOperationCyclesTresholdReached(new EventArgs());
             }

@@ -41,9 +41,9 @@
         {
             Stack<IMatter> availableBlueberries = new Stack<IMatter>();
 
-            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(new Vector()));
-            availableBlueberries.Push(BlueberryFactory.CreateNervousBlueberry(new Vector()));
-            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(new Vector(20, 25)));
+            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
+            availableBlueberries.Push(BlueberryFactory.CreateNervousBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
+            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
 
             return availableBlueberries;
         }

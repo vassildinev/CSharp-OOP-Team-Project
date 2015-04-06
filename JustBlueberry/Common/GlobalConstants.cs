@@ -5,7 +5,8 @@
     public class GlobalConstants
     {
         // Engine Constants
-        public const int DefaultEngineThreadSleepParameter = 500;
+        public const int DefaultEngineFramesPerSecond = 10;
+        public static int OneSecondInMilliseconds = 1000;
 
         // Console Constants
         public const int DefaultConsoleBufferHeight = 47;
@@ -33,7 +34,7 @@
 
         public const int DefaultWorldRows = DefaultConsoleBufferHeight - 2;
         public const int DefaultWorldCols = DefaultConsoleBufferWidth - 2;
-
+        public static readonly Vector DefaultBlueberryPosistionOnScreen = new Vector(15, 15);
         public static string StartScreenText =
                 "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
                 "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░██░░░░░░░░░░░\n" +
@@ -81,5 +82,8 @@
                 "                                 *     @@@@@                                     \n" +
                 "                                  *     @@@                                      \n" +
                 "                                    ****                                         \n";
+
+        // Operator constants
+        public const int FramesCycleDuration = 120;
     }
 }

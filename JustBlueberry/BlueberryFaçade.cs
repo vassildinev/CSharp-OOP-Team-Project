@@ -1,5 +1,6 @@
 ﻿namespace JustBlueberry
 {
+    using System;
     using System.Collections.Generic;
 
     using JustBlueberry.Blueberries.Contracts;
@@ -8,27 +9,56 @@
     using JustBlueberry.Engine.Operation;
     using JustBlueberry.Factory;
     using JustBlueberry.Operator;
+    using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles;
     using JustBlueberry.Renderer;
-    using System;
+    using JustBlueberry.Renderer.Contracts;
 
-    public static class BlueberryFaçade
+    public sealed class BlueberryFaçade
     {
-        public static void StartApplication()
+        private static readonly BlueberryFaçade SingleInstance = new BlueberryFaçade();
+
+        private IRenderer renderer;
+        private IOperator particleOperator;
+        private IOperationStrategy operationStrategy;
+        private BlueberryEngine engine;
+
+        private BlueberryFaçade()
+        { }
+
+        public static BlueberryFaçade Instance
         {
-            var renderer = new AdvancedConsoleRenderer(GlobalConstants.DefaultWorldRows, GlobalConstants.DefaultWorldCols);
+            get
+            {
+                return SingleInstance;
+            }
+        }
 
-            renderer.RenderWelcomeScreen();
+        /// <summary>
+        ///  Prepare the application for execution
+        /// </summary>
+        public void Initialize()
+        {
+            // Instantiate all required objects to run the application.
+            this.renderer = new AdvancedConsoleRenderer(GlobalConstants.DefaultWorldRows, GlobalConstants.DefaultWorldCols);
+            this.particleOperator = new ParticleOperator();
+            this.operationStrategy = new BlueberryOperationStrategy(particleOperator);
+            this.engine = new BlueberryEngine(renderer, particleOperator, operationStrategy);
 
-            var particleOperator = new ParticleOperator();
+            // Engage the event handler for the change of blueberries.
+            this.particleOperator.OperationCyclesTresholdReached += new EventHandler(engine.OperatorCyclesElapsed);
+        }
+
+        /// <summary>
+        /// Execute the application
+        /// </summary>
+        public void Start()
+        {
+            // Render start screen frame.
+            this.renderer.RenderStartScreen();
 
 
-            var operationStrategy = new BlueberryOperationStrategy(particleOperator);
-
-            var engine = new BlueberryEngine(renderer, particleOperator, operationStrategy, 50);
-
-            particleOperator.OperationCyclesTresholdReached += new EventHandler(engine.OperatorCyclesElapsed);
-
+            // Run the application logic
             engine.Run();
         }
     }

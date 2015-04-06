@@ -6,8 +6,12 @@
 
     public interface IRenderer
     {
+        void RenderStartScreen();
+
         void Push(IRenderable objectToRender);
+
         void Print();
+
         void Release();
     }
 }
