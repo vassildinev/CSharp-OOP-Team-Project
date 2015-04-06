@@ -44,6 +44,8 @@
     <Compile Include="ApplicationExceptions\HadronMissingException.cs" />
     <Compile Include="ApplicationExceptions\PowerElectronMissingException.cs" />
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
+    <Compile Include="Blueberries\Contracts\JustMatter.cs" />
+    <Compile Include="Blueberries\Hydroberry.cs" />
     <Compile Include="BlueberryFaçade.cs" />
     <Compile Include="Common\GlobalConstants.cs" />
     <Compile Include="Engine\Contracts\IEngine.cs" />
@@ -52,7 +54,7 @@
     <Compile Include="Particles\Contracts\BaseParticles\Baryon.cs" />
     <Compile Include="Particles\BlackElectron.cs" />
     <Compile Include="Blueberries\DarkBlueberry.cs" />
-    <Compile Include="Blueberries\DarkMatter.cs" />
+    <Compile Include="Blueberries\Contracts\DarkMatter.cs" />
     <Compile Include="Blueberries\Contracts\IMatter.cs" />
     <Compile Include="Blueberries\Contracts\IRadioactive.cs" />
     <Compile Include="Particles\Contracts\IDynamic.cs" />

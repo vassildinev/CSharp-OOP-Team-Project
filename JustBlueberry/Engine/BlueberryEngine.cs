@@ -121,6 +121,7 @@
         {
             // Render current frame
             renderer.Print();
+            this.substance.ForEach(blueberry => this.renderer.RenderBlueberryInformation(blueberry));
             // Release all particles from rendering
             renderer.Release();
 

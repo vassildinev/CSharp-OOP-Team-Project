@@ -9,6 +9,7 @@
     using JustBlueberry.Renderer.Contracts;
     using JustBlueberry.Particles.Contracts;
     using System.Threading;
+    using JustBlueberry.Blueberries.Contracts;
 
     public class ConsoleRenderer : IRenderer
     {
@@ -37,7 +38,7 @@
                 this.gameWorldRows = value;
             }
         }
-        
+
         protected int GameWorldCols
         {
             get { return this.gameWorldCols; }
@@ -50,7 +51,7 @@
                 this.gameWorldCols = value;
             }
         }
-        
+
         protected char[,] GameWorld
         {
             get { return this.gameWorld; }
@@ -143,8 +144,17 @@
                 Console.WriteLine();
             }
             Console.CursorVisible = false;
-            Thread.Sleep(5000);
+            Thread.Sleep(GlobalConstants.StartScreenShowDuration);
             Console.Clear();
+        }
+
+        public virtual void RenderBlueberryInformation(IMatter blueberry)
+        {
+            Point postionForInfo = GlobalConstants.NervousBlueberryProtonStartPosition +GlobalConstants.DefaultBlueberryPosistionOnScreen + new Vector(12, -5);
+            Console.SetCursorPosition(postionForInfo.Col, postionForInfo.Row);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(blueberry.GetType().Name);
+            //Console.WriteLine(blueberry.GetInformation());
         }
     }
 }

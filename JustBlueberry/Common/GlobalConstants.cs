@@ -82,6 +82,7 @@
                 "                                 *     @@@@@                                     \n" +
                 "                                  *     @@@                                      \n" +
                 "                                    ****                                         \n";
+        public const int StartScreenShowDuration = 5000;
 
         // Operator constants
         public const int FramesCycleDuration = 120;

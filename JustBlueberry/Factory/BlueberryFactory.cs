@@ -7,8 +7,9 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Common;
+    using System.Reflection;
 
-    public static class BlueberryFactory
+    public class BlueberryFactory
     {
         public static IMatter CreateDarkBlueberry(Vector translationVector)
         {
@@ -34,16 +35,32 @@
                                             new BlueElectron(GlobalConstants.NervousBlueberryBlueElectronStartPosition + translationVector),
                                             new GreenElectron(GlobalConstants.NervousBlueberryGreenElectronPosition + translationVector)
                                         }
-                                      );
+                                       );
+        }
+
+        public static IMatter CreateHydrogen(Vector translationVector)
+        {
+            return new Hydroberry(new List<IHadron>() 
+                                  { 
+                                      new Proton(GlobalConstants.NervousBlueberryProtonStartPosition + translationVector),
+                                      new BlueElectron(GlobalConstants.NervousBlueberryBlueElectronStartPosition + translationVector)
+                                  }
+                                 );
         }
 
         public static Stack<IMatter> ListAvailableBlueberries()
         {
+            BlueberryFactory factory = new BlueberryFactory();
+
             Stack<IMatter> availableBlueberries = new Stack<IMatter>();
 
-            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
-            availableBlueberries.Push(BlueberryFactory.CreateNervousBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
-            availableBlueberries.Push(BlueberryFactory.CreateDarkBlueberry(GlobalConstants.DefaultBlueberryPosistionOnScreen));
+            var methods = typeof(BlueberryFactory).GetMethods();
+
+            foreach (var method in methods)
+            {
+                if (method.Name.Contains("Create"))
+                    availableBlueberries.Push(method.Invoke(factory, new object[] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
+            }
 
             return availableBlueberries;
         }
