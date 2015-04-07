@@ -36,7 +36,8 @@
 
         public virtual string GetInfo()
         {
-            return "Blueberries are essential for our health. One must never underestimate the power of the blueberries. After all, they give us an absolutely delicious ice-cream. Meow.";
+            return "Battle formations in case of attack by another Alien species.";
+            /*return "Blueberries are essential for our health. One must never underestimate the power of the blueberries. After all, they give us an absolutely delicious ice-cream. Meow.";*/
         }
     }
 }
