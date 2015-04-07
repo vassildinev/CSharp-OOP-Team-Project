@@ -12,6 +12,7 @@
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {
+        private const int InstancessCannotBeValue = 0;
         private Stack<IMatter> localCopyOfInstancesFromFactory;
         private IList<IMatter> instancesToEngine;
 
@@ -31,7 +32,7 @@
 
         public IList<IMatter> SendInstancesToEngine()
         {
-                if (this.localCopyOfInstancesFromFactory.Count != 0)
+            if (this.localCopyOfInstancesFromFactory.Count != InstancessCannotBeValue)
                 {
                     this.InstancesToEngine = new List<IMatter>() { this.localCopyOfInstancesFromFactory.Pop() };
                 }
