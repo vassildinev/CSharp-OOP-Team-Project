@@ -1,7 +1,9 @@
-﻿using JustBlueberry.Blueberries.Contracts;
-using System.Collections.Generic;
-namespace JustBlueberry.Engine.Contracts
+﻿namespace JustBlueberry.Engine.Contracts
 {
+    using System.Collections.Generic;
+
+    using JustBlueberry.Blueberries.Contracts;
+
     public interface IEngine
     {
         void Run();

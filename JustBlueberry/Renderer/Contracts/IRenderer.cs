@@ -1,10 +1,11 @@
 ﻿namespace JustBlueberry.Renderer.Contracts
 {
     using JustBlueberry.Blueberries.Contracts;
-// Interface for rendering objects on an output source.
-
     using JustBlueberry.Particles.Contracts;
 
+    /// <summary>
+    /// Interface for rendering objects on an output source.
+    /// </summary>
     public interface IRenderer
     {
         void RenderStartScreen();

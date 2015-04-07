@@ -1,5 +1,6 @@
 ﻿namespace JustBlueberry.Factory
 {
+    using System.Reflection;
     using System.Collections.Generic;
 
     using JustBlueberry.Blueberries;
@@ -7,7 +8,6 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Common;
-    using System.Reflection;
 
     public class BlueberryFactory
     {

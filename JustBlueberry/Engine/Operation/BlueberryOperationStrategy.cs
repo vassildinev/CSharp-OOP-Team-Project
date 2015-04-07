@@ -1,13 +1,14 @@
 ﻿namespace JustBlueberry.Engine.Operation
 {
+    using System;
+    using System.Linq;
     using System.Collections.Generic;
 
     using JustBlueberry.Common.Extensions;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Factory;
     using JustBlueberry.Operator.Contracts;
-using System;
-    using System.Linq;
+
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {

@@ -8,7 +8,6 @@
     using JustBlueberry.Operator.Contracts;
     using JustBlueberry.Particles.Contracts;
 
-
     public delegate void MyEventHandler(object source, EventArgs e);
 
     public class ParticleOperator : IOperator

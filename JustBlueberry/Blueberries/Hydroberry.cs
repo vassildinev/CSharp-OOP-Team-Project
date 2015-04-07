@@ -1,8 +1,9 @@
 ﻿namespace JustBlueberry.Blueberries
 {
+    using System.Collections.Generic;
+
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Particles.Contracts;
-    using System.Collections.Generic;
 
     public class Hydroberry : JustMatter, IMatter
     {
