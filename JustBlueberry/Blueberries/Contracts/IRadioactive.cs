@@ -2,7 +2,7 @@
 {
     public interface IRadioactive
     {
-        bool HasPowerElectron { get; set; }
+        bool HasPowerElectron { get; }
 
         bool CheckState();
 

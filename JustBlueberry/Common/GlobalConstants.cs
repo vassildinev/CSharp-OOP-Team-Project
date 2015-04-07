@@ -86,5 +86,8 @@
 
         // Operator constants
         public const int FramesCycleDuration = 120;
+
+        // Helpers constants
+        public const int DefaultBlueberryInfoWidth = 30;
     }
 }

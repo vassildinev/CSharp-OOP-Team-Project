@@ -59,7 +59,7 @@
             foreach (var method in methods)
             {
                 if (method.Name.Contains("Create"))
-                    availableBlueberries.Push(method.Invoke(factory, new object[] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
+                    availableBlueberries.Push(method.Invoke(factory, new [] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
             }
 
             return availableBlueberries;

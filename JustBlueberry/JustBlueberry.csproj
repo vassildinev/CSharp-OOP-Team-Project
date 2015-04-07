@@ -45,8 +45,10 @@
     <Compile Include="ApplicationExceptions\PowerElectronMissingException.cs" />
     <Compile Include="ApplicationExceptions\RendererMissingException.cs" />
     <Compile Include="Blueberries\Contracts\JustMatter.cs" />
+    <Compile Include="Blueberries\Contracts\Matter.cs" />
     <Compile Include="Blueberries\Hydroberry.cs" />
     <Compile Include="BlueberryFaçade.cs" />
+    <Compile Include="Common\Helpers\TextJustifier.cs" />
     <Compile Include="Common\GlobalConstants.cs" />
     <Compile Include="Engine\Contracts\IEngine.cs" />
     <Compile Include="Engine\Operation\BlueberryOperationStrategy.cs" />

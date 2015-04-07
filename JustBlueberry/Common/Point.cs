@@ -22,5 +22,20 @@
         {
             return new Point(pt.Row - speed.DeltaR, pt.Col - speed.DeltaC);
         }
+
+        public static Point operator +(Point first, Point second)
+        {
+            return new Point(first.Row + second.Row, first.Col + second.Col);
+        }
+
+        public static Point operator -(Point first, Point second)
+        {
+            return new Point(first.Row - second.Row, first.Col - second.Col);
+        }
+
+        public static Point operator /(Point pt, int number)
+        {
+            return new Point(pt.Row / number, pt.Col / number);
+        }
     }
 }

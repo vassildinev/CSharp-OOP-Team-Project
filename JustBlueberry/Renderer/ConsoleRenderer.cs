@@ -10,6 +10,7 @@
     using JustBlueberry.Particles.Contracts;
     using System.Threading;
     using JustBlueberry.Blueberries.Contracts;
+    using JustBlueberry.Common.Helpers;
 
     public class ConsoleRenderer : IRenderer
     {
@@ -154,7 +155,7 @@
             Console.SetCursorPosition(postionForInfo.Col, postionForInfo.Row);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(blueberry.GetType().Name);
-            //Console.WriteLine(blueberry.GetInformation());
+            Console.WriteLine(TextJustifier.Justify(blueberry.GetInfo()));
         }
     }
 }

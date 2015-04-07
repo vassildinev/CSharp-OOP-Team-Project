@@ -10,5 +10,7 @@
         IEnumerable<IHadron> Particles { get; } // A foreachable collection of particles
 
         Point GetPosition();
+
+        string GetInfo();
     }
 }

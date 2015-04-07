@@ -8,31 +8,11 @@
     using JustBlueberry.Common;
     using JustBlueberry.Particles;
 
-    public abstract class DarkMatter : IMatter
+    public abstract class DarkMatter : Matter, IMatter
     {
-        protected IEnumerable<IHadron> particles;
 
-        protected DarkMatter(IEnumerable<IHadron> particles)
-        {
-            this.Particles = particles;
-        }
-
-        public IEnumerable<IHadron> Particles
-        {
-            get { return this.particles; }
-            protected set { this.particles = value; }
-        }
-
-        public Point GetPosition()
-        {
-            foreach (var item in this.particles)
-            {
-                if (item is Proton)
-                {
-                    return item.Position;
-                }
-            }
-            return new Point();
-        }
+        protected DarkMatter(IList<IHadron> particles)
+            : base(particles)
+        { }
     }
 }
