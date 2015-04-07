@@ -59,5 +59,10 @@
             p.ResetPosition();
             p.ResetSpeed();
         }
+
+        public override string GetInfo()
+        {
+            return "This blueberry is very nervous! You must be careful with it!";
+        }
     }
 }

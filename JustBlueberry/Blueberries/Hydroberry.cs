@@ -10,5 +10,9 @@
         public Hydroberry(IList<IHadron> particles)
             :base(particles)
         { }
+        public override string GetInfo()
+        {
+            return "This blueberry is hydro and it is so flexible!";
+        }
     }
 }

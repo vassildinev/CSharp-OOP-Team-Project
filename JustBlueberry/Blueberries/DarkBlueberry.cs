@@ -33,5 +33,9 @@
 
             return result;
         }
+        public override string GetInfo()
+        {
+            return "The darkbluberry is a blueberry with dark berries!";
+        }
     }
 }

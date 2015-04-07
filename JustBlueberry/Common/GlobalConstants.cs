@@ -138,5 +138,6 @@
 
         // Helpers constants
         public const int DefaultBlueberryInfoWidth = 30;
+        
     }
 }
