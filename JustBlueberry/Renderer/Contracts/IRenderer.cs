@@ -10,6 +10,8 @@
     {
         void RenderStartScreen();
 
+        void RenderEndScreen();
+
         void Push(IRenderable objectToRender);
 
         void Print();

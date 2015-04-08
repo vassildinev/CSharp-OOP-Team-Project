@@ -149,6 +149,50 @@
             Console.Clear();
         }
 
+        public virtual void RenderEndScreen()
+        {
+            string[] endScreenTextSplit = GlobalConstants.EndScreenText.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            int charArrayCols = GlobalConstants.EndScreenText.IndexOf('\n');
+            int charArrayRows = endScreenTextSplit.Length;
+
+            char[,] startScreenTextAsCharArray = new char[charArrayRows, charArrayCols];
+
+            Console.SetCursorPosition(0, 0);
+
+            for (int row = 0; row < charArrayRows; row++)
+            {
+                for (int col = 0; col < charArrayCols; col++)
+                {
+                    var currentChar = endScreenTextSplit[row][col];
+                    switch (currentChar)
+                    {
+                        case '░': 
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
+                        case '*':
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            break;
+                        case '█':
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            break;
+                        case '@':
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            break;
+                        default:
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+
+                    Console.Write(currentChar);
+                }
+
+                Console.WriteLine();
+            }
+            Console.CursorVisible = false;
+            Thread.Sleep(GlobalConstants.EndScreenShowDuration);
+            Console.Clear();
+        }
+
         public virtual void RenderBlueberryInformation(IMatter blueberry)
         {
             // TODO: REFACTOR THIS SPAGHETTI CODE!!!

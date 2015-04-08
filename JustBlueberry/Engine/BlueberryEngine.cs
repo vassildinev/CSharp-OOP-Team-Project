@@ -103,6 +103,13 @@
             // Central loop.
             while (true)
             {
+                // Check if there are any berries left to render.
+                if (this.particleOperator.GetElapsedCycles() == 320) // TODO: Refactor!!!
+                {
+                    Console.Clear();
+                    break;
+                }
+
                 // Update all particles' and objects' positions.
                 this.Update();
 

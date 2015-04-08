@@ -56,8 +56,12 @@
         {
             // Render start screen frame.
             this.renderer.RenderStartScreen();
+
             // Run the application logic
             engine.Run();
+
+            // Render end of application screen.
+            this.renderer.RenderEndScreen();
         }
     }
 }

@@ -51,11 +51,16 @@
 
         public void EndOperationCycle()
         {
-            this.framesElapsed = (++this.framesElapsed) % GlobalConstants.FramesCycleDuration;
-            if (this.framesElapsed == GlobalConstants.FramesCycleDuration - 1)
+            int valueToReturn = (++this.framesElapsed) % GlobalConstants.FramesCycleDuration;
+            if (valueToReturn == GlobalConstants.FramesCycleDuration - 1)
             {
                 OnOperationCyclesTresholdReached(new EventArgs());
             }
+        }
+
+        public int GetElapsedCycles()
+        {
+            return this.framesElapsed;
         }
     }
 }

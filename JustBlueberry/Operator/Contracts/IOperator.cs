@@ -15,5 +15,7 @@
         void OperateOn(IMatter matter);
 
         void EndOperationCycle();
+
+        int GetElapsedCycles();
     }
 }
