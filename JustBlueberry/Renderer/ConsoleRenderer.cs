@@ -151,11 +151,22 @@
 
         public virtual void RenderBlueberryInformation(IMatter blueberry)
         {
-            Point postionForInfo = GlobalConstants.NervousBlueberryProtonStartPosition +GlobalConstants.DefaultBlueberryPosistionOnScreen + new Vector(12, -5);
-            Console.SetCursorPosition(postionForInfo.Col, postionForInfo.Row);
+            // TODO: REFACTOR THIS SPAGHETTI CODE!!!
+            string blueberryHeaderText = blueberry.GetType().Name;
+            string blueberryInfo = blueberry.GetInfo();
+
+            Vector forCenteredText = new Vector();
+            forCenteredText.DeltaR = GlobalConstants.NervousBlueberryProtonStartPosition.Row + 5;
+            forCenteredText.DeltaC = -blueberryHeaderText.Length / 2 + blueberry.GetPosition().Col;
+
+            Point postionForHeaderAndInfo = new Point(forCenteredText.DeltaR + GlobalConstants.NervousBlueberryProtonStartPosition.Row+ GlobalConstants.DefaultBlueberryPosistionOnScreen.DeltaR, forCenteredText.DeltaC);
+
+            Console.SetCursorPosition(postionForHeaderAndInfo.Col, postionForHeaderAndInfo.Row);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(blueberry.GetType().Name);
-            Console.WriteLine(TextJustifier.Justify(blueberry.GetInfo()));
+            Console.WriteLine(blueberryHeaderText);
+
+            forCenteredText.DeltaC = -GlobalConstants.DefaultBlueberryInfoWidth / 2 + blueberry.GetPosition().Col;
+            Console.WriteLine(TextJustifier.Justify(blueberryInfo, forCenteredText.DeltaC));
         }
     }
 }

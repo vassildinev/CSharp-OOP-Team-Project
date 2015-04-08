@@ -7,7 +7,7 @@
 
     public static class TextJustifier
     {
-        public static string Justify(string input)
+        public static string Justify(string input, int indentation = 0)
         {
             IList<string> containedWords = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
             StringBuilder result = new StringBuilder();
@@ -32,6 +32,7 @@
                     gapsCount = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count() - 1;
                     if (gapsCount == 0)
                     {
+                        result.Append(new string(' ', indentation));
                         result.AppendLine(line);
                         currentLine.Clear();
                         continue;
@@ -58,6 +59,7 @@
                             gapsCount--;
                         }
                     }
+                    result.Append(new string(' ', indentation));
                     result.AppendLine(line);
                     currentLine.Clear();
                 }
@@ -67,6 +69,7 @@
             gapsCount = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count() - 1;
             if (gapsCount == 0)
             {
+                result.Append(new string(' ', indentation));
                 result.Append(line);
                 return result.ToString();
             }
@@ -91,6 +94,7 @@
                     gapsCount--;
                 }
             }
+            result.Append(new string(' ', indentation));
             result.Append(line);
             return result.ToString();
         }

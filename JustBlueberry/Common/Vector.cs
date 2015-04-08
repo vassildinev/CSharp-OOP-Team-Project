@@ -17,5 +17,15 @@
         public int DeltaR { get; set; }
 
         public int DeltaC { get; set; }
+
+        public static Vector operator +(Vector vect, Vector otherVect)
+        {
+            return new Vector(vect.DeltaR + otherVect.DeltaR, vect.DeltaC + otherVect.DeltaC);
+        }
+
+        public static Vector operator -(Vector vect, Vector otherVect)
+        {
+            return new Vector(vect.DeltaR - otherVect.DeltaR, vect.DeltaC - otherVect.DeltaC);
+        }
     }
 }

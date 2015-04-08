@@ -9,10 +9,12 @@
     public abstract class Matter : IMatter
     {
         private IEnumerable<IHadron> particles;
+        protected Point startBlueberryPosition;
 
         public Matter(IList<IHadron> particles)
         {
             this.particles = particles;
+            this.startBlueberryPosition = this.GetStartPosition();
         }
 
         public IEnumerable<IHadron> Particles
@@ -22,6 +24,11 @@
         }
 
         public virtual Point GetPosition()
+        {
+            return this.startBlueberryPosition;
+        }
+
+        protected virtual Point GetStartPosition()
         {
             foreach (var item in this.particles)
             {
@@ -36,7 +43,7 @@
 
         public virtual string GetInfo()
         {
-            return "Blueberries are essential for our health. One must never underestimate the power of the blueberries. After all, they give us an absolutely delicious ice-cream. Meow.";
+            return "Blueberries are essential for our health. One must never underestimate the power of the blueberries. After all, they give us an absolutely delicious ice-cream. Cats love berries... Meow.";
         }
     }
 }

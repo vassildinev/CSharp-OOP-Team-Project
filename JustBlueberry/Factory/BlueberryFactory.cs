@@ -38,7 +38,7 @@
                                        );
         }
 
-        public static IMatter CreateHydrogen(Vector translationVector)
+        public static IMatter CreateHydroberry(Vector translationVector)
         {
             return new Hydroberry(new List<IHadron>() 
                                   { 

@@ -34,7 +34,7 @@
 
         public const int DefaultWorldRows = DefaultConsoleBufferHeight - 2;
         public const int DefaultWorldCols = DefaultConsoleBufferWidth - 2;
-        public static readonly Vector DefaultBlueberryPosistionOnScreen = new Vector(15, 15);
+        public static readonly Vector DefaultBlueberryPosistionOnScreen = new Vector(7, 29);
         public static string StartScreenText =
                 "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
                 "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░██░░░░░░░░░░░\n" +
