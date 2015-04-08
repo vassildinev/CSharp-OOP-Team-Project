@@ -56,8 +56,6 @@
         {
             // Render start screen frame.
             this.renderer.RenderStartScreen();
-
-
             // Run the application logic
             engine.Run();
         }

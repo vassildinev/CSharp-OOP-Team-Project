@@ -1,5 +1,6 @@
 ﻿namespace JustBlueberry.Factory
 {
+    using System.Reflection;
     using System.Collections.Generic;
 
     using JustBlueberry.Blueberries;
@@ -7,10 +8,10 @@
     using JustBlueberry.Particles.Contracts;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Common;
-    using System.Reflection;
 
     public class BlueberryFactory
     {
+        private const string NameCreate = "Create";
         public static IMatter CreateDarkBlueberry(Vector translationVector)
         {
             return new DarkBlueberry(
@@ -58,7 +59,7 @@
 
             foreach (var method in methods)
             {
-                if (method.Name.Contains("Create"))
+                if (method.Name.Contains(NameCreate))
                     availableBlueberries.Push(method.Invoke(factory, new [] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
             }
 

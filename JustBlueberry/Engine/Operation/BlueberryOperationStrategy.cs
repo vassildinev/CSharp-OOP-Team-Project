@@ -1,16 +1,18 @@
 ﻿namespace JustBlueberry.Engine.Operation
 {
+    using System;
+    using System.Linq;
     using System.Collections.Generic;
 
     using JustBlueberry.Common.Extensions;
     using JustBlueberry.Blueberries.Contracts;
     using JustBlueberry.Factory;
     using JustBlueberry.Operator.Contracts;
-using System;
-    using System.Linq;
+
 
     public class BlueberryOperationStrategy : IOperationStrategy
     {
+        private const int InstancessCannotBeValue = 0;
         private Stack<IMatter> localCopyOfInstancesFromFactory;
         private IList<IMatter> instancesToEngine;
 
@@ -30,7 +32,7 @@ using System;
 
         public IList<IMatter> SendInstancesToEngine()
         {
-                if (this.localCopyOfInstancesFromFactory.Count != 0)
+            if (this.localCopyOfInstancesFromFactory.Count != InstancessCannotBeValue)
                 {
                     this.InstancesToEngine = new List<IMatter>() { this.localCopyOfInstancesFromFactory.Pop() };
                 }

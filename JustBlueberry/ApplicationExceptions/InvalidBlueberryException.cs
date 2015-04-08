@@ -2,6 +2,7 @@
 {
     using System;
     using System.Runtime.Serialization;
+
     public class InvalidBlueberryException : ApplicationException, ISerializable
     {
         private string message;
