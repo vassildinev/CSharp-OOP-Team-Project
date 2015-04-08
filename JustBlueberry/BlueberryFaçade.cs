@@ -54,14 +54,8 @@
         /// </summary>
         public void Start()
         {
-            // Render start screen frame.
-            this.renderer.RenderStartScreen();
-
-            // Run the application logic
+            // Run the engine logic
             engine.Run();
-
-            // Render end of application screen.
-            this.renderer.RenderEndScreen();
         }
     }
 }

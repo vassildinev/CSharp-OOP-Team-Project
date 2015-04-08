@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="JustBlueberry.ApplicationExceptions.HadronMissingException" Collapsed="true">
-    <Position X="10.25" Y="3.75" Width="1.5" />
+    <Position X="27.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ApplicationExceptions\HadronMissingException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.ApplicationExceptions.InvalidBlueberryException" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12" Y="4.75" Width="1.5" />
+    <Position X="31.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACA=</HashCode>
       <FileName>ApplicationExceptions\InvalidBlueberryException.cs</FileName>
@@ -16,81 +16,128 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JustBlueberry.ApplicationExceptions.PowerElectronMissingException" Collapsed="true">
-    <Position X="10.25" Y="4.75" Width="1.5" />
+    <Position X="27.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ApplicationExceptions\PowerElectronMissingException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.ApplicationExceptions.RendererMissingException" Collapsed="true">
-    <Position X="12" Y="3.75" Width="1.5" />
+    <Position X="31.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ApplicationExceptions\RendererMissingException.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="JustBlueberry.Blueberries.DarkBlueberry" Collapsed="true">
-    <Position X="7.75" Y="1.75" Width="1.5" />
+  <Class Name="JustBlueberry.Blueberries.Contracts.DarkMatter" Collapsed="true">
+    <Position X="10.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Blueberries\Contracts\DarkMatter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustBlueberry.Blueberries.Contracts.JustMatter" Collapsed="true">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Blueberries\Contracts\JustMatter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustBlueberry.Blueberries.Contracts.Matter" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAACAABAAgAAEAAAABAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Blueberries\Contracts\Matter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustBlueberry.Blueberries.DarkBlueberry" Collapsed="true">
+    <Position X="9.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Blueberries\DarkBlueberry.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="JustBlueberry.Blueberries.NervousBlueberry" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.75" Y="2.75" Width="1.5" />
+  <Class Name="JustBlueberry.Blueberries.Hydroberry" Collapsed="true">
+    <Position X="7.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAJAAABBAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Blueberries\Hydroberry.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JustBlueberry.Blueberries.NervousBlueberry" Collapsed="true">
+    <Position X="11.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAJAAABBAAAAAAAAAAAAAAAEAAAAIAAAAAAAA=</HashCode>
       <FileName>Blueberries\NervousBlueberry.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="JustBlueberry.Common.Extensions.IEnumerableExtensions">
-    <Position X="15" Y="4.25" Width="1.5" />
+  <Class Name="JustBlueberry.Common.Extensions.IEnumerableExtensions" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\Extensions\IEnumerableExtensions.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.Common.GlobalConstants" Collapsed="true">
-    <Position X="15.25" Y="0.5" Width="1.5" />
+    <Position X="26" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQBYAAREAAAgIIgDAMBEAIAAFYAAgCAAAAACAQQAAI=</HashCode>
+      <HashCode>AAQBYAAREAAAgIIgDAcBEAIAAFYAAgCAAAAACAQQAAI=</HashCode>
       <FileName>Common\GlobalConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.Common.Vector" Collapsed="true">
-    <Position X="11.75" Y="1.25" Width="1.5" />
+    <Position X="27.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\Vector.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="JustBlueberry.Engine.BlueberryEngine" Collapsed="true">
-    <Position X="10" Y="0.5" Width="1.5" />
+  <Class Name="JustBlueberry.Common.Helpers.TextJustifier" Collapsed="true">
+    <Position X="26" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Helpers\TextJustifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JustBlueberry.Engine.BlueberryEngine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EEQQAAACAAAAAAAAAggAAABIAAAAQAQAABCAAABAgAI=</HashCode>
       <FileName>Engine\BlueberryEngine.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JustBlueberry.Engine.Operation.PrimaryEngineOperationStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAAAAAAAAAAAAAAAAIAACAAAABgAAAAAAAQAA=</HashCode>
+      <FileName>Engine\Operation\PrimaryEngineOperationStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JustBlueberry.Factory.BlueberryFactory" Collapsed="true">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="29.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAEgAAgAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAQAAQAAAAAAAAAAAAAAEBAAgAAAQAAAAAAAAAA=</HashCode>
       <FileName>Factory\BlueberryFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="JustBlueberry.Operator.ParticleOperator" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10" Y="1.25" Width="1.5" />
+    <Position X="26" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAQAAAgAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAQAAAAAQAAAAAQAAAgAAgAA=</HashCode>
       <FileName>Operator\ParticleOperator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="JustBlueberry.Particles.BlackElectron" Collapsed="true">
-    <Position X="4.25" Y="4.25" Width="1.5" />
+    <Position X="18.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAKACAAAgAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Particles\BlackElectron.cs</FileName>
@@ -98,7 +145,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.BlueElectron" Collapsed="true">
-    <Position X="6.25" Y="4.25" Width="1.5" />
+    <Position X="20.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAKACAAAgAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Particles\BlueElectron.cs</FileName>
@@ -106,7 +153,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.DynamicProton" Collapsed="true">
-    <Position X="1.5" Y="2" Width="1.5" />
+    <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACKACAAAgAAAAAAABAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\DynamicProton.cs</FileName>
@@ -114,7 +161,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.GreenElectron" Collapsed="true">
-    <Position X="5.5" Y="2.75" Width="1.5" />
+    <Position X="13.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAKACAAAgAAKAEAAAABAAAAABBEAAAABBAAA=</HashCode>
       <FileName>Particles\GreenElectron.cs</FileName>
@@ -122,7 +169,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.Proton" Collapsed="true">
-    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA=</HashCode>
       <FileName>Particles\Proton.cs</FileName>
@@ -130,7 +177,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.RedElectron" Collapsed="true">
-    <Position X="0.5" Y="3" Width="1.5" />
+    <Position X="15.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAKACAAAgAAABAAAAAAAAAAAABAAIAAAAAAA=</HashCode>
       <FileName>Particles\RedElectron.cs</FileName>
@@ -138,7 +185,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.WhiteElectron" Collapsed="true">
-    <Position X="2" Y="4.25" Width="1.5" />
+    <Position X="17" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAKACAAAgAAAAAAAAAAAACAAABAAAAAAAAAA=</HashCode>
       <FileName>Particles\WhiteElectron.cs</FileName>
@@ -146,7 +193,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.Contracts.BaseParticles.Baryon" Collapsed="true">
-    <Position X="3" Y="0.75" Width="1.5" />
+    <Position X="13" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\BaseParticles\Baryon.cs</FileName>
@@ -154,7 +201,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.Contracts.BaseParticles.Electron" Collapsed="true">
-    <Position X="3.25" Y="2.75" Width="1.5" />
+    <Position X="17" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAKACAAAAAAAAAAABAAgAAQAABAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\BaseParticles\Electron.cs</FileName>
@@ -162,7 +209,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.Contracts.BaseParticles.Hadron" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\BaseParticles\Hadron.cs</FileName>
@@ -170,7 +217,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Particles.Contracts.BaseParticles.Meson" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\BaseParticles\Meson.cs</FileName>
@@ -178,7 +225,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Renderer.AdvancedConsoleRenderer" Collapsed="true">
-    <Position X="15.5" Y="1.25" Width="1.5" />
+    <Position X="32" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAECAA=</HashCode>
       <FileName>Renderer\AdvancedConsoleRenderer.cs</FileName>
@@ -186,96 +233,131 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="JustBlueberry.Renderer.ConsoleRenderer" Collapsed="true">
-    <Position X="17" Y="0.5" Width="1.5" />
+    <Position X="32" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAAAIABAAAAAQAAAAAAEAAgABAGKAA=</HashCode>
+      <HashCode>AAAAAAoAAAAAAAAAAIABAAAAAQAAAAAAEAAgABAGKAA=</HashCode>
       <FileName>Renderer\ConsoleRenderer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="JustBlueberry.BlueberryFaçade" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAACAAAQAAAAAAAAAIAAAAAAAAQgAAAAQAgAA=</HashCode>
+      <FileName>BlueberryFaçade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="JustBlueberry.BlueberryMain" Collapsed="true">
-    <Position X="13.5" Y="0.5" Width="1.5" />
+    <Position X="31.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>BlueberryMain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="JustBlueberry.Common.Point" Collapsed="true">
-    <Position X="13.5" Y="1.25" Width="1.5" />
+    <Position X="26" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAUAAAAAAAEAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\Point.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="JustBlueberry.Blueberries.Contracts.IMatter" Collapsed="true">
-    <Position X="10" Y="2" Width="1.5" />
+    <Position X="27.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAACAAAAAAAAAAAAABAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Blueberries\Contracts\IMatter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Blueberries.Contracts.IRadioactive" Collapsed="true">
-    <Position X="13.5" Y="2" Width="1.5" />
+    <Position X="26" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Blueberries\Contracts\IRadioactive.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="JustBlueberry.Operator.Contracts.IOperator" Collapsed="true">
-    <Position X="11.75" Y="2" Width="1.5" />
+  <Interface Name="JustBlueberry.Engine.Contracts.IEngine" Collapsed="true">
+    <Position X="26" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Engine\Contracts\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JustBlueberry.Engine.Operation.IOperationStrategy" Collapsed="true">
+    <Position X="29.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Operation\IOperationStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JustBlueberry.Operator.Contracts.IOperator" Collapsed="true">
+    <Position X="31.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAQAAAAAQAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Operator\Contracts\IOperator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.IColor" Collapsed="true">
-    <Position X="17" Y="2" Width="1.5" />
+    <Position X="34.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\IColor.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.IDynamic" Collapsed="true">
-    <Position X="13.5" Y="2.75" Width="1.5" />
+    <Position X="29" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\IDynamic.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.IHadron" Collapsed="true">
-    <Position X="11.75" Y="2.75" Width="1.5" />
+    <Position X="28.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\IHadron.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.IMovable" Collapsed="true">
-    <Position X="15.25" Y="2.75" Width="1.5" />
+    <Position X="30" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.IRenderable" Collapsed="true">
-    <Position X="17" Y="2.75" Width="1.5" />
+    <Position X="34.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\IRenderable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Particles.Contracts.ISound" Collapsed="true">
-    <Position X="10" Y="2.75" Width="1.5" />
+    <Position X="29.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particles\Contracts\ISound.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="JustBlueberry.Renderer.Contracts.IRenderer" Collapsed="true">
-    <Position X="15.25" Y="2" Width="1.5" />
+    <Position X="27.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAGCAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAGCAA=</HashCode>
       <FileName>Renderer\Contracts\IRenderer.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Enum Name="JustBlueberry.Blueberries.Contracts.MeaningOfLife" Collapsed="true">
+    <Position X="26" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Blueberries\Contracts\MeaningOfLife.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="JustBlueberry.Operator.MyEventHandler" Collapsed="true">
+    <Position X="26" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Operator\ParticleOperator.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

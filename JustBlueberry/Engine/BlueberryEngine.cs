@@ -100,6 +100,8 @@
 
         public void Run()
         {
+            this.Renderer.RenderStartScreen();
+
             // Central loop.
             while (true)
             {
@@ -122,6 +124,8 @@
                 // Ensure constant app flow.
                 Thread.Sleep(this.threadSleepParameter);
             }
+
+            this.Renderer.RenderEndScreen();
         }
 
         private void Render()

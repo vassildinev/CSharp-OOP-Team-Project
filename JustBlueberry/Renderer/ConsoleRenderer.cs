@@ -110,8 +110,6 @@
             int charArrayCols = GlobalConstants.StartScreenText.IndexOf('\n');
             int charArrayRows = startScreenTextSplit.Length;
 
-            char[,] startScreenTextAsCharArray = new char[charArrayRows, charArrayCols];
-
             Console.SetCursorPosition(0, 0);
 
             for (int row = 0; row < charArrayRows; row++)
