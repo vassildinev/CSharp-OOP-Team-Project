@@ -12,7 +12,7 @@
         { }
         public override string GetInfo()
         {
-            return "This blueberry is hydro and it is so flexible!";
+            return "This blueberry is the fuel of all the stars in the universe - infinite ice-cream for all! So hydro, so flexible!";
         }
     }
 }

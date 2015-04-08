@@ -9,10 +9,12 @@
     public abstract class Matter : IMatter
     {
         private IEnumerable<IHadron> particles;
+        private Point startBlueberryPosition;
 
         public Matter(IList<IHadron> particles)
         {
             this.particles = particles;
+            this.startBlueberryPosition = this.GetStartPosition();
         }
 
         public IEnumerable<IHadron> Particles
@@ -22,6 +24,11 @@
         }
 
         public virtual Point GetPosition()
+        {
+            return this.startBlueberryPosition;
+        }
+
+        protected virtual Point GetStartPosition()
         {
             foreach (var item in this.particles)
             {

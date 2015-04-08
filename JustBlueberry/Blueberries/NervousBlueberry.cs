@@ -62,7 +62,7 @@
 
         public override string GetInfo()
         {
-            return "This blueberry is very nervous! You must be careful with it!";
+            return "----------!WARNING!---------- Nervous blueberry in the house! Blink and you'll miss it.";
         }
     }
 }
