@@ -30,6 +30,9 @@
         public static readonly Point NervousBlueberryBlueElectronStartPosition = new Point(9, 11);
         public static readonly Point NervousBlueberryGreenElectronPosition = new Point(9, 11);
 
+        public static readonly Point HydroberryProtonStartPosition = NervousBlueberryProtonStartPosition;
+        public static readonly Point HydroberryBlueElectronStartPosition = NervousBlueberryBlueElectronStartPosition;
+
         // Renderer constants
 
         public const int DefaultWorldRows = DefaultConsoleBufferHeight - 2;

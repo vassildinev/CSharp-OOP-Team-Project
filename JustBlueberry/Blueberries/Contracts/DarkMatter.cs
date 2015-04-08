@@ -12,7 +12,7 @@
     {
 
         protected DarkMatter(IList<IHadron> particles)
-            : base(particles)
+            : base(particles, MeaningOfLife.DestroyTheUniverse)
         { }
     }
 }

@@ -7,6 +7,8 @@
 
     public interface IMatter
     {
+        MeaningOfLife LifetimeGoal { get; }
+
         IEnumerable<IHadron> Particles { get; } // A foreachable collection of particles
 
         Point GetPosition();

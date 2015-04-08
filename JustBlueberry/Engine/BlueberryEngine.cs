@@ -21,7 +21,7 @@
 
     public class BlueberryEngine : IEngine
     {
-        private BlueberryOperationStrategy strategy;
+        private PrimaryEngineOperationStrategy strategy;
         private IOperator particleOperator;
         private IList<IMatter> substance;
         private IRenderer renderer;
@@ -34,7 +34,7 @@
             this.Renderer = renderer;
             this.ParticleOperator = particleOperator;
             this.FramesPerSecond = framesPerSecond;
-            this.strategy = new BlueberryOperationStrategy(this.ParticleOperator);
+            this.strategy = new PrimaryEngineOperationStrategy(this.ParticleOperator);
             this.substance = this.strategy.SendInstancesToEngine();
 
             this.threadSleepParameter = GlobalConstants.OneSecondInMilliseconds / this.FramesPerSecond;

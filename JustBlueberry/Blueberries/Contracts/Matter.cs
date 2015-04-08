@@ -10,10 +10,12 @@
     {
         private IEnumerable<IHadron> particles;
         private Point startBlueberryPosition;
+        private MeaningOfLife lifetimeGoal;
 
-        public Matter(IList<IHadron> particles)
+        public Matter(IList<IHadron> particles, MeaningOfLife lifetimeGoal)
         {
             this.particles = particles;
+            this.lifetimeGoal = lifetimeGoal;
             this.startBlueberryPosition = this.GetStartPosition();
         }
 
@@ -21,6 +23,12 @@
         {
             get { return new List<IHadron>(this.particles); }
             private set { this.particles = value; }
+        }
+
+        public MeaningOfLife LifetimeGoal
+        {
+            get { return this.lifetimeGoal; }
+            private set { this.lifetimeGoal = value; }
         }
 
         public virtual Point GetPosition()

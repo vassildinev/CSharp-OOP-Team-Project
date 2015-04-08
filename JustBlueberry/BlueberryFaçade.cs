@@ -42,7 +42,7 @@
             // Instantiate all required objects to run the application.
             this.renderer = new AdvancedConsoleRenderer(GlobalConstants.DefaultWorldRows, GlobalConstants.DefaultWorldCols);
             this.particleOperator = new ParticleOperator();
-            this.operationStrategy = new BlueberryOperationStrategy(particleOperator);
+            this.operationStrategy = new PrimaryEngineOperationStrategy(particleOperator);
             this.engine = new BlueberryEngine(renderer, particleOperator, operationStrategy);
 
             // Engage the event handler for the change of blueberries.

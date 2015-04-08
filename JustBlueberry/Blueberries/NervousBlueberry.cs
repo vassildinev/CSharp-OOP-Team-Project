@@ -10,7 +10,7 @@
     using JustBlueberry.Particles;
     using JustBlueberry.Particles.Contracts;
 
-    public class NervousBlueberry : JustMatter, IMatter, IRadioactive
+    public class NervousBlueberry : DarkMatter, IMatter, IRadioactive
     {
         private bool hasPowerElectron;
 

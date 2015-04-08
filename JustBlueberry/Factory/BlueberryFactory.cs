@@ -1,7 +1,8 @@
 ﻿namespace JustBlueberry.Factory
 {
-    using System.Reflection;
     using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
 
     using JustBlueberry.Blueberries;
     using JustBlueberry.Particles;
@@ -11,7 +12,9 @@
 
     public class BlueberryFactory
     {
-        private const string NameCreate = "Create";
+        private const string MethodNameKeyword = "Create";
+
+        // Blueberry creation methods.
         public static IMatter CreateDarkBlueberry(Vector translationVector)
         {
             return new DarkBlueberry(
@@ -43,27 +46,47 @@
         {
             return new Hydroberry(new List<IHadron>() 
                                   { 
-                                      new Proton(GlobalConstants.NervousBlueberryProtonStartPosition + translationVector),
-                                      new BlueElectron(GlobalConstants.NervousBlueberryBlueElectronStartPosition + translationVector)
-                                  }
+                                      new Proton(GlobalConstants.HydroberryProtonStartPosition + translationVector),
+                                      new BlueElectron(GlobalConstants.HydroberryBlueElectronStartPosition + translationVector)
+                                  },
+                                  MeaningOfLife.SaveTheUniverse
                                  );
         }
 
-        public static Stack<IMatter> ListAvailableBlueberries()
+        // Methods operating over the creation methods
+        public static IEnumerable<IMatter> ListBlueberries()
         {
             BlueberryFactory factory = new BlueberryFactory();
 
-            Stack<IMatter> availableBlueberries = new Stack<IMatter>();
+            List<IMatter> availableBlueberries = new List<IMatter>();
 
             var methods = typeof(BlueberryFactory).GetMethods();
 
             foreach (var method in methods)
             {
-                if (method.Name.Contains(NameCreate))
-                    availableBlueberries.Push(method.Invoke(factory, new [] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
+                if (method.Name.Contains(MethodNameKeyword))
+                    availableBlueberries.Add(method.Invoke(factory, new[] { GlobalConstants.DefaultBlueberryPosistionOnScreen }) as IMatter);
             }
 
             return availableBlueberries;
+        }
+
+        public static IEnumerable<IMatter> GetSortedAvailableBlueberries()
+        {
+            var availableBlueberries = BlueberryFactory.ListBlueberries();
+            return availableBlueberries.OrderByDescending(berry => (int)berry.LifetimeGoal).ToList();
+        }
+
+        public static Stack<IMatter> GetStackedSortedAvailableBlueberries()
+        {
+            Stack<IMatter> stackedSortedAvailableBlueberries = new Stack<IMatter>();
+
+            var sortedAvailableBerries = BlueberryFactory.GetSortedAvailableBlueberries();
+            foreach (var berry in sortedAvailableBerries)
+            {
+                stackedSortedAvailableBlueberries.Push(berry);
+            }
+            return stackedSortedAvailableBlueberries;
         }
     }
 }

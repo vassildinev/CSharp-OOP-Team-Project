@@ -8,8 +8,8 @@
 
     public abstract class JustMatter : Matter, IMatter
     {
-        public JustMatter(IList<IHadron> particles)
-            :base(particles)
+        public JustMatter(IList<IHadron> particles, MeaningOfLife lifetimeGoal)
+            :base(particles, lifetimeGoal)
         { }
     }
 }
