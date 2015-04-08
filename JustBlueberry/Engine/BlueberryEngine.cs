@@ -81,7 +81,6 @@
 
         public IList<IMatter> Substance
         {
-            // Use of defensive programming for the collection of blueberries.
             get { return new List<IMatter>(this.substance); }
             set
             {
